@@ -1,0 +1,148 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#3478F6",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Split View and Slide Over on iPads that only had Slide Over.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Apple left Split View out on some iPads that run iOS 12, such as the iPad mini 2, iPad mini 3 and the first iPad Air. They only get Slide Over.\n\nSplitViewEnabler turns on real Split View, so two apps can share the screen side by side. It can also put a Slide Over app on top of a Split View, like on newer iPads.\n\nTo use it, drag an app from the Dock to the left or right edge of the screen, or pull a Slide Over app down by its top handle. Apps that don't support multitasking (such as Settings) stay full screen.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{225, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/splitviewenabler/split-view-portrait.png",
+              "accessibilityText": "Mail and Notes side by side in portrait"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/splitviewenabler/split-view-safari-weather.png",
+              "accessibilityText": "Safari and Weather side by side in portrait"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{295, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/splitviewenabler/settings.png",
+              "accessibilityText": "Split View settings page"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Split View: two apps side by side, in portrait and landscape\n- Slide Over on top of a Split View (three apps at once)\n- A lighter \"2 apps max\" mode for 1 GB iPads\n- Settings switch to turn it off, with no respring needed",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > Split View:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Mode**: *Split View + Slide Over* (default, like iPads with official Split View), *Split View, 2 apps max* (uses less memory), or *Slide Over only (stock)*.\n- **Respring**: restarts SpringBoard. Only needed if a Split View is open while you change the mode.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iOS 12.x\n- Made for 64-bit iPads that have Slide Over but no Split View: iPad mini 2, iPad mini 3, iPad Air (1st generation)\n- iPads that already have full Split View are not changed",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "2.0.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "10 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/SplitViewEnabler-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/SplitViewEnabler-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 2.0.1",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Renamed to include \"(iOS 12)\" in the name.\n- Now installs only on iOS 12.x.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 2.0.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Settings page with Enabled switch, Mode picker and Respring button.\n- Slide Over on top of Split View.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

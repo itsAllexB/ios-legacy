@@ -1,0 +1,160 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#2F8FD8",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Apple's iPhone Weather app, running natively on iPad.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iPads on iOS 12 have no Weather app. WeatherPad makes Apple's iPhone Weather app for iOS 12 run like a real iPad app: it fills the whole screen, works in portrait and landscape, and adapts to Split View and Slide Over.\n\nWeatherPad needs Apple's iPhone Weather app on the iPad. The [installer](https://github.com/itsAllexB/WeatherPad-iOS12/tree/main/installer) downloads it and its animated backgrounds directly from Apple and installs them. Apple's files are not included in the package.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{228, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-portrait.jpg",
+              "accessibilityText": "Weather in portrait"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-split-view.jpg",
+              "accessibilityText": "Weather in Split View"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-slide-over.jpg",
+              "accessibilityText": "Weather in Slide Over"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/settings.png",
+              "accessibilityText": "Weather for iPad settings page"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{293, 220}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-landscape.jpg",
+              "accessibilityText": "Weather in landscape, two columns"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-thunderstorm.jpg",
+              "accessibilityText": "Animated thunderstorm background"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Adaptive iPad layout: two columns when the window is 660 pt or wider, iPhone layouts below that\n- Works in portrait, landscape, Split View and Slide Over\n- Tapping the Weather widget in Today View opens the Weather app instead of weather.com\n- Animated weather backgrounds (clouds, rain, snow, lightning) scaled to fill the iPad screen\n- Smooth header fade and snapping while scrolling, like on iPhone\n- Optional \"Use iPhone Layout\" mode",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > Weather for iPad:\n\n- **Enabled**: turns all fixes on or off. Layout changes apply the next time Weather opens.\n- **Widget Opens Weather App**: tapping the Weather widget opens the Weather app for that city instead of weather.com. Applies right away.\n- **Use iPhone Layout**: runs Weather like any iPhone app (2x button, no multitasking) instead of the iPad layout. Needs a respring, then reopen Weather.\n- **Animated Backgrounds**: shows the animated backgrounds scaled to fill the screen. Needs the backgrounds from the installer; without them, or when off, Weather shows a plain gradient.\n- **Respring**: restarts SpringBoard.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iPads running iOS 12.x\n- Needs Apple's iPhone Weather app, installed with the WeatherPad installer",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.2.3"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "19 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/WeatherPad-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/WeatherPad-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.2.3",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Renamed to include \"(iOS 12)\" in the name.\n- Now installs only on iOS 12.x.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.2.2",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Native iPad layout, Today widget fix, animated backgrounds, header fade and snap fixes, iPhone layout option.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

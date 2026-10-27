@@ -1,0 +1,62 @@
+Package: com.itsallexb.defaultbrowser
+Name: DefaultBrowser (iOS 12)
+Version: 2.0.1
+Architecture: iphoneos-arm
+Description: Opens http/https links from other apps in the browser you pick (Firefox, Chrome, Brave, DuckDuckGo, Edge, Firefox Focus...) instead of Safari (iOS 12). Settings > Default Browser. Replaces FirefoxDefault.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 12.0), firmware (<< 13.0), preferenceloader
+Conflicts: com.itsallexb.firefoxdefault
+Replaces: com.itsallexb.firefoxdefault
+Provides: com.itsallexb.firefoxdefault
+Installed-Size: 140
+Homepage: https://github.com/itsAllexB/DefaultBrowser-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultbrowser.png
+Filename: debs/com.itsallexb.defaultbrowser_2.0.1_iphoneos-arm.deb
+Size: 18834
+MD5sum: dec61ffbe4678353a052fbf9ce4d2726
+SHA1: 90914c47d0e394694e4716d78a1da7989a16f9bc
+SHA256: ae8d51e45a769484f569cdec76b70b4adcd6f82fea2b254f66753e51ac5e22f7
+
+Package: com.itsallexb.splitviewenabler
+Name: SplitViewEnabler (iOS 12)
+Version: 2.0.1
+Architecture: iphoneos-arm
+Description: Enables Split View (and Slide Over on top of Split View) on iPads that Apple limited to Slide Over, such as the iPad mini 2, on iOS 12. Settings > Split View.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 12.0), firmware (<< 13.0), preferenceloader
+Installed-Size: 132
+Homepage: https://github.com/itsAllexB/SplitViewEnabler-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.splitviewenabler.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.splitviewenabler.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.splitviewenabler.png
+Filename: debs/com.itsallexb.splitviewenabler_2.0.1_iphoneos-arm.deb
+Size: 10532
+MD5sum: d6caf6038c58f425480881a504ca21ac
+SHA1: 3c108917d3398d0f803503c68a189b05aed20d17
+SHA256: 54f3a5616e9bde5b4370199250d1adff79b03650273ba37b359d172620b53b0a
+
+Package: com.itsallexb.weatherpad
+Name: WeatherPad (iOS 12)
+Version: 1.2.3
+Architecture: iphoneos-arm
+Description: Makes the iPhone Weather app ported to iPad (iOS 12) work like a native iPad app: a full-screen iPad layout in portrait and landscape that also adapts to Split View and Slide Over, and tapping the Today widget opens the Weather app instead of weather.com. Animated weather backgrounds are scaled to fill the iPad screen when the WeatherUI resources are installed. An iPhone-layout fallback is in Settings > Weather for iPad.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 12.0), firmware (<< 13.0), preferenceloader
+Installed-Size: 136
+Homepage: https://github.com/itsAllexB/WeatherPad-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.weatherpad.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.weatherpad.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.weatherpad.png
+Filename: debs/com.itsallexb.weatherpad_1.2.3_iphoneos-arm.deb
+Size: 19614
+MD5sum: 974b54ace64636090aa51e040cd00dbd
+SHA1: 3a37666cdecfb767322d87f2148ee9597fe1a211
+SHA256: 02d9a9d6d77823ac738781412c1481c53182eb6acbdd104774bbf3faa09c15f4

@@ -1,0 +1,97 @@
+{
+  "repo": {
+    "name": "iOS Legacy",
+    "description": "Tweaks for older iPads and iPhones on iOS 12, by itsAllexB.",
+    "maintainer": "itsAllexB",
+    "github": "itsAllexB/ios-legacy"
+  },
+  "packages": {
+    "com.itsallexb.splitviewenabler": {
+      "short": "splitviewenabler",
+      "github": "itsAllexB/SplitViewEnabler-iOS12",
+      "tint": "#3478F6",
+      "tagline": "Split View and Slide Over on iPads that only had Slide Over.",
+      "description": "Apple left Split View out on some iPads that run iOS 12, such as the iPad mini 2, iPad mini 3 and the first iPad Air. They only get Slide Over.\n\nSplitViewEnabler turns on real Split View, so two apps can share the screen side by side. It can also put a Slide Over app on top of a Split View, like on newer iPads.\n\nTo use it, drag an app from the Dock to the left or right edge of the screen, or pull a Slide Over app down by its top handle. Apps that don't support multitasking (such as Settings) stay full screen.",
+      "features": [
+        "Split View: two apps side by side, in portrait and landscape",
+        "Slide Over on top of a Split View (three apps at once)",
+        "A lighter \"2 apps max\" mode for 1 GB iPads",
+        "Settings switch to turn it off, with no respring needed"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iOS 12.x",
+        "Made for 64-bit iPads that have Slide Over but no Split View: iPad mini 2, iPad mini 3, iPad Air (1st generation)",
+        "iPads that already have full Split View are not changed"
+      ],
+      "settings": "Settings > Split View:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Mode**: *Split View + Slide Over* (default, like iPads with official Split View), *Split View, 2 apps max* (uses less memory), or *Slide Over only (stock)*.\n- **Respring**: restarts SpringBoard. Only needed if a Split View is open while you change the mode.",
+      "screenshots": [
+        {"file": "split-view-portrait.png", "alt": "Mail and Notes side by side in portrait"},
+        {"file": "split-view-safari-weather.png", "alt": "Safari and Weather side by side in portrait"},
+        {"file": "settings.png", "alt": "Split View settings page"}
+      ],
+      "changelog": [
+        {"version": "2.0.1", "changes": ["Renamed to include \"(iOS 12)\" in the name.", "Now installs only on iOS 12.x."]},
+        {"version": "2.0.0", "changes": ["First public release.", "Settings page with Enabled switch, Mode picker and Respring button.", "Slide Over on top of Split View."]}
+      ]
+    },
+    "com.itsallexb.defaultbrowser": {
+      "short": "defaultbrowser",
+      "github": "itsAllexB/DefaultBrowser-iOS12",
+      "tint": "#FF9500",
+      "tagline": "Open web links in the browser you choose instead of Safari.",
+      "description": "On iOS 12 every web link opens in Safari. DefaultBrowser sends the http and https links that other apps open (Mail, Messages, Notes and so on) to the browser you pick instead.\n\nSafari still opens normally from its own icon, and \"Open in Safari\" inside another browser still works. If the browser you picked is removed, links simply go back to Safari.",
+      "features": [
+        "Supports Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge and Opera",
+        "The picker only lists browsers that are installed",
+        "Falls back to Safari when the chosen browser is missing",
+        "Replaces the older FirefoxDefault tweak"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)"
+      ],
+      "settings": "Settings > Default Browser:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**: the browser that web links open in. Only installed browsers are listed; the note below the list names the other supported browsers.\n\nMicrosoft Edge and Opera use link formats that are not officially documented. They are offered only when the installed app supports them.",
+      "screenshots": [
+        {"file": "settings.png", "alt": "Default Browser settings page"}
+      ],
+      "changelog": [
+        {"version": "2.0.1", "changes": ["Renamed to include \"(iOS 12)\" in the name.", "Now installs only on iOS 12.x."]},
+        {"version": "2.0.0", "changes": ["First public release.", "Choose between several browsers (successor of FirefoxDefault)."]}
+      ]
+    },
+    "com.itsallexb.weatherpad": {
+      "short": "weatherpad",
+      "github": "itsAllexB/WeatherPad-iOS12",
+      "tint": "#2F8FD8",
+      "tagline": "Apple's iPhone Weather app, running natively on iPad.",
+      "description": "iPads on iOS 12 have no Weather app. WeatherPad makes Apple's iPhone Weather app for iOS 12 run like a real iPad app: it fills the whole screen, works in portrait and landscape, and adapts to Split View and Slide Over.\n\nWeatherPad needs Apple's iPhone Weather app on the iPad. The [installer](https://github.com/itsAllexB/WeatherPad-iOS12/tree/main/installer) downloads it and its animated backgrounds directly from Apple and installs them. Apple's files are not included in the package.",
+      "features": [
+        "Adaptive iPad layout: two columns when the window is 660 pt or wider, iPhone layouts below that",
+        "Works in portrait, landscape, Split View and Slide Over",
+        "Tapping the Weather widget in Today View opens the Weather app instead of weather.com",
+        "Animated weather backgrounds (clouds, rain, snow, lightning) scaled to fill the iPad screen",
+        "Smooth header fade and snapping while scrolling, like on iPhone",
+        "Optional \"Use iPhone Layout\" mode"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iPads running iOS 12.x",
+        "Needs Apple's iPhone Weather app, installed with the WeatherPad installer"
+      ],
+      "settings": "Settings > Weather for iPad:\n\n- **Enabled**: turns all fixes on or off. Layout changes apply the next time Weather opens.\n- **Widget Opens Weather App**: tapping the Weather widget opens the Weather app for that city instead of weather.com. Applies right away.\n- **Use iPhone Layout**: runs Weather like any iPhone app (2x button, no multitasking) instead of the iPad layout. Needs a respring, then reopen Weather.\n- **Animated Backgrounds**: shows the animated backgrounds scaled to fill the screen. Needs the backgrounds from the installer; without them, or when off, Weather shows a plain gradient.\n- **Respring**: restarts SpringBoard.",
+      "screenshots": [
+        {"file": "weather-portrait.jpg", "alt": "Weather in portrait"},
+        {"file": "weather-landscape.jpg", "alt": "Weather in landscape, two columns"},
+        {"file": "weather-thunderstorm.jpg", "alt": "Animated thunderstorm background"},
+        {"file": "weather-split-view.jpg", "alt": "Weather in Split View"},
+        {"file": "weather-slide-over.jpg", "alt": "Weather in Slide Over"},
+        {"file": "settings.png", "alt": "Weather for iPad settings page"}
+      ],
+      "changelog": [
+        {"version": "1.2.3", "changes": ["Renamed to include \"(iOS 12)\" in the name.", "Now installs only on iOS 12.x."]},
+        {"version": "1.2.2", "changes": ["First public release.", "Native iPad layout, Today widget fix, animated backgrounds, header fade and snap fixes, iPhone layout option."]}
+      ]
+    }
+  }
+}

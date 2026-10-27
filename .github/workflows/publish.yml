@@ -1,0 +1,88 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Rebuilds, signs and deploys the APT repo to GitHub Pages.
+# Needs: Settings > Pages > Source = "GitHub Actions", and the GPG_PRIVATE_KEY secret
+# (optional GPG_PASSPHRASE). See README.md.
+name: Publish repo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [package-released]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Fetch the latest release .debs of the package repos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p incoming
+          for repo in itsAllexB/SplitViewEnabler-iOS12 itsAllexB/DefaultBrowser-iOS12 itsAllexB/WeatherPad-iOS12; do
+            if gh release download --repo "$repo" --pattern '*.deb' --dir "incoming/${repo#*/}" --clobber 2>/dev/null; then
+              echo "Fetched release .debs from $repo"
+            else
+              echo "No release .debs in $repo (skipped)"
+            fi
+          done
+          # Store each deb under its canonical name; a release build replaces a committed
+          # deb of the same package and version.
+          find incoming -name '*.deb' -print0 | while IFS= read -r -d '' deb; do
+            pkg=$(dpkg-deb -f "$deb" Package)
+            ver=$(dpkg-deb -f "$deb" Version)
+            arch=$(dpkg-deb -f "$deb" Architecture)
+            case "$pkg" in
+              com.itsallexb.*) ;;
+              *) echo "Ignoring $deb (package $pkg)"; continue ;;
+            esac
+            cp "$deb" "debs/${pkg}_${ver}_${arch}.deb"
+            echo "Added ${pkg} ${ver}"
+          done
+
+      - name: Build and sign the index
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: scripts/build-repo.sh
+
+      - name: Stage the site
+        run: |
+          set -euo pipefail
+          mkdir _site
+          cp -R debs depictions icons add _site/
+          cp index.html CydiaIcon.png ios-legacy.gpg ios-legacy.asc .nojekyll \
+             Packages Packages.gz Packages.bz2 Packages.xz Release Release.gpg InRelease _site/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

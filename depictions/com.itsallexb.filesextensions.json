@@ -73,7 +73,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.0"
+          "text": "1.0.1"
         },
         {
           "class": "DepictionTableTextView",
@@ -83,7 +83,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Size",
-          "text": "15 KB"
+          "text": "14 KB"
         },
         {
           "class": "DepictionTableTextView",
@@ -121,12 +121,22 @@
       "views": [
         {
           "class": "DepictionSubheaderView",
+          "title": "Version 1.0.1",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Teal Settings icon, so it doesn't look like BatteryPlus.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "Version 1.0.0",
           "useBoldText": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- First public release.",
+          "markdown": "- Test version (not published).",
           "useSpacing": true
         }
       ]

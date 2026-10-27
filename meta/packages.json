@@ -37,25 +37,22 @@
     },
     "com.itsallexb.defaultbrowser": {
       "short": "defaultbrowser",
-      "github": "itsAllexB/DefaultBrowser-iOS12",
+      "github": "itsAllexB/DefaultApps-iOS12",
+      "transitional": true,
       "tint": "#FF9500",
-      "tagline": "Open web links in the browser you choose instead of Safari.",
-      "description": "On iOS 12 every web link opens in Safari. DefaultBrowser sends the http and https links that other apps open (Mail, Messages, Notes and so on) to the browser you pick instead.\n\nSafari still opens normally from its own icon, and \"Open in Safari\" inside another browser still works. If the browser you picked is removed, links simply go back to Safari.",
+      "tagline": "DefaultBrowser is now DefaultApps.",
+      "description": "DefaultBrowser has been replaced by **DefaultApps (iOS 12)**, which also lets you choose the mail app and the maps app.\n\nThis version is an empty package: upgrading to it installs DefaultApps, which keeps the browser you picked. After that you can remove DefaultBrowser; DefaultApps stays installed.",
       "features": [
-        "Supports Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge and Opera",
-        "The picker only lists browsers that are installed",
-        "Falls back to Safari when the chosen browser is missing",
-        "Replaces the older FirefoxDefault tweak"
+        "Installs DefaultApps (iOS 12) and moves your browser choice over",
+        "Contains no files of its own; safe to remove after the upgrade"
       ],
       "compatibility": [
-        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
-        "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)"
+        "iOS 12.x, like DefaultApps"
       ],
-      "settings": "Settings > Default Browser:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**: the browser that web links open in. Only installed browsers are listed; the note below the list names the other supported browsers.\n\nMicrosoft Edge and Opera use link formats that are not officially documented. They are offered only when the installed app supports them.",
-      "screenshots": [
-        {"file": "settings.png", "alt": "Default Browser settings page"}
-      ],
+      "settings": "None. The settings are in Settings > Default Apps.",
+      "screenshots": [],
       "changelog": [
+        {"version": "2.0.2", "changes": ["DefaultBrowser is now DefaultApps. This empty package installs DefaultApps, which keeps your browser choice. You can remove it afterwards."]},
         {"version": "2.0.1", "changes": ["Renamed to include \"(iOS 12)\" in the name.", "Now installs only on iOS 12.x."]},
         {"version": "2.0.0", "changes": ["First public release.", "Choose between several browsers (successor of FirefoxDefault)."]}
       ]
@@ -130,7 +127,7 @@
       "github": "itsAllexB/FilesRoot-iOS12",
       "tint": "#5E687C",
       "tagline": "Browse the whole filesystem in the Files app. Read-only by default.",
-      "description": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > FilesRoot, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
+      "description": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > Files Root, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
       "features": [
         "A \"System\" location in Files, starting at / or at /var/mobile, with a name you can change",
         "Quick Look previews, copying files and folders out, sharing and opening in other apps",
@@ -144,17 +141,17 @@
         "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)",
         "Works alongside FilesArchiver and FilesExtensions"
       ],
-      "settings": "Settings > FilesRoot:\n\n- **Enabled**: shows or hides the location in Files.\n- **Name**: the name in the Files sidebar (default \"System\"). Reopen Files to see a new name.\n- **Start Folder**: `/` (default) or `/var/mobile`.\n- **Show Hidden Files** (off): shows names that start with a dot.\n- **Image Thumbnails** (on): thumbnails for images, within strict size limits.\n- **Allow Changes (dangerous)** (off): lets Files create, rename, move, delete and overwrite items, except in protected system locations. Deleting the wrong file can stop the device from booting, and deleting here is permanent.\n- **Open Files**: opens the Files app.",
+      "settings": "Settings > Files Root:\n\n- **Enabled**: shows or hides the location in Files.\n- **Name**: the name in the Files sidebar (default \"System\"). Reopen Files to see a new name.\n- **Start Folder**: `/` (default) or `/var/mobile`.\n- **Show Hidden Files** (off): shows names that start with a dot.\n- **Image Thumbnails** (on): thumbnails for images, within strict size limits.\n- **Allow Changes (dangerous)** (off): lets Files create, rename, move, delete and overwrite items, except in protected system locations. Deleting the wrong file can stop the device from booting, and deleting here is permanent.\n- **Open Files**: opens the Files app.",
       "screenshots": [
         {"file": "sidebar.png", "alt": "System location in the Files sidebar"},
         {"file": "browse-root.png", "alt": "The root folder in the System location"},
         {"file": "read-only.png", "alt": "This location is read-only alert"},
         {"file": "protected.png", "alt": "Protected system location alert"},
-        {"file": "settings.png", "alt": "FilesRoot settings page"}
+        {"file": "settings.png", "alt": "Files Root settings page"}
       ],
       "changelog": [
-        {"version": "1.0.1", "changes": ["First public release.", "Safety and robustness fixes from a full review: thumbnails are limited by image size, so huge or unusual images can't crash the location.", "Protections: top-level folders, app data containers and every File Provider storage folder can't be deleted or moved; hard-linked files are never overwritten.", "Links: deleting a link removes only the link, and paths are resolved before they are checked.", "Free space and limits: copying a folder out checks free space and stops at 20,000 items or 4 GB.", "Items only root can read are greyed out, and sizes update while a folder is open."]},
-        {"version": "1.0.0", "changes": ["First version (not published)."]}
+        {"version": "1.0.2", "changes": ["First public release.", "Settings: the entry is now called Files Root, like Files Archiver and Files Extensions, and the thumbnail limits are described correctly.", "Safety and robustness fixes from a full review: thumbnails are limited by image size, so huge or unusual images can't crash the location.", "Protections: top-level folders, app data containers and every File Provider storage folder can't be deleted or moved; hard-linked files are never overwritten.", "Links: deleting a link removes only the link, and paths are resolved before they are checked.", "Free space and limits: copying a folder out checks free space and stops at 20,000 items or 4 GB.", "Items only root can read are greyed out, and sizes update while a folder is open."]},
+        {"version": "1.0.1", "changes": ["Test versions 1.0.0 and 1.0.1 (not published)."]}
       ]
     },
     "com.itsallexb.filesextensions": {
@@ -183,7 +180,8 @@
         {"file": "settings.png", "alt": "Files Extensions settings page"}
       ],
       "changelog": [
-        {"version": "1.0.0", "changes": ["First public release."]}
+        {"version": "1.0.1", "changes": ["First public release.", "Teal Settings icon, so it doesn't look like BatteryPlus."]},
+        {"version": "1.0.0", "changes": ["Test version (not published)."]}
       ]
     },
     "com.itsallexb.batteryplus": {
@@ -253,7 +251,8 @@
         {"file": "mailto-fields.png", "alt": "The fields a mail app receives from a mailto link"}
       ],
       "changelog": [
-        {"version": "3.0.0", "changes": ["First release as DefaultApps (successor of DefaultBrowser 2.0.1).", "Choose the mail app and the maps app, as well as the browser.", "Replaces DefaultBrowser and keeps your browser choice."]}
+        {"version": "3.0.1", "changes": ["First release as DefaultApps (successor of DefaultBrowser 2.0.1).", "Choose the mail app and the maps app, as well as the browser.", "Replaces DefaultBrowser and keeps your browser choice. DefaultBrowser users get it with a normal upgrade."]},
+        {"version": "3.0.0", "changes": ["Test version (not published)."]}
       ]
     }
   }

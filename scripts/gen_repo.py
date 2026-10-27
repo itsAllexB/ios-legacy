@@ -262,7 +262,7 @@ def cydia_depiction(pkg, ctl, meta, base, size):
     body = f"""<div class="card head"><img src="../icons/{pkg}.png" alt="">
 <div><h1>{html.escape(ctl.get('Name', pkg))}</h1><div class="muted">{html.escape(meta['tagline'])}</div></div></div>
 <div class="card">{md_to_html(meta['description'])}</div>
-<div class="card"><h2>Screenshots</h2><div class="shots">{shots}</div></div>
+{f'<div class="card"><h2>Screenshots</h2><div class="shots">{shots}</div></div>' if shots else ""}
 <div class="card"><h2>Features</h2>{md_to_html(bullets_md(meta['features']))}</div>
 <div class="card"><h2>Settings</h2>{md_to_html(meta['settings'])}</div>
 <div class="card"><h2>Compatibility</h2>{md_to_html(bullets_md(meta['compatibility']))}</div>
@@ -286,6 +286,8 @@ def index_page(latest, meta_all, base):
     for pkg in sorted(latest, key=lambda p: latest[p][0].get("Name", p).lower()):
         ctl, _ = latest[pkg]
         m = meta_all["packages"].get(pkg, {})
+        if m.get("transitional"):  # empty upgrade packages stay in Packages but aren't listed
+            continue
         tagline = m.get("tagline") or ctl.get("Description", "").split("\n")[0]
         gh = f'<a href="https://github.com/{m["github"]}">Source</a>' if m.get("github") else ""
         rows.append(f"""<div class="pkg"><img src="icons/{pkg}.png" alt="">
@@ -314,6 +316,8 @@ def readme_table(latest, meta_all):
     for pkg in sorted(latest, key=lambda p: latest[p][0].get("Name", p).lower()):
         ctl, _ = latest[pkg]
         m = meta_all["packages"].get(pkg, {})
+        if m.get("transitional"):  # empty upgrade packages stay in Packages but aren't listed
+            continue
         name = ctl.get("Name", pkg)
         link = f"[{name}](https://github.com/{m['github']})" if m.get("github") else name
         tagline = m.get("tagline") or ctl.get("Description", "").split("\n")[0]

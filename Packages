@@ -21,26 +21,46 @@ Recommends: com.opa334.ccsupport
 
 Package: com.itsallexb.defaultapps
 Name: DefaultApps (iOS 12)
-Version: 3.0.0
+Version: 3.0.1
 Architecture: iphoneos-arm
 Description: Choose your default browser, mail app and maps app on iOS 12, like iOS 14. Web links open in Firefox, Chrome, Brave, DuckDuckGo and more; mailto: links open in Gmail, Outlook, Spark, Yahoo Mail, Proton Mail and more; Apple Maps links open in Google Maps, Waze and more. Only installed apps are offered. Settings > Default Apps. Replaces DefaultBrowser.
 Maintainer: itsAllexB
 Author: itsAllexB
 Section: Tweaks
 Depends: mobilesubstrate, firmware (>= 12.0), firmware (<< 13.0), preferenceloader
-Conflicts: com.itsallexb.defaultbrowser, com.itsallexb.firefoxdefault
-Replaces: com.itsallexb.defaultbrowser, com.itsallexb.firefoxdefault
-Provides: com.itsallexb.defaultbrowser, com.itsallexb.firefoxdefault
+Conflicts: com.itsallexb.firefoxdefault
+Replaces: com.itsallexb.defaultbrowser (<< 2.0.2), com.itsallexb.firefoxdefault
+Provides: com.itsallexb.firefoxdefault
+Breaks: com.itsallexb.defaultbrowser (<< 2.0.2)
 Installed-Size: 224
 Homepage: https://github.com/itsAllexB/DefaultApps-iOS12
 Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultapps.html
 SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultapps.json
 Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultapps.png
-Filename: debs/com.itsallexb.defaultapps_3.0.0_iphoneos-arm.deb
-Size: 31818
-MD5sum: 6a913631b471752699aff1f49998da26
-SHA1: 869345ac743128ebc62cecb0779146e892eb3be6
-SHA256: 77e922cbde1b99e2339c15e6ea46c5e9343333d9e01841e7753a50d3dbe4ad02
+Filename: debs/com.itsallexb.defaultapps_3.0.1_iphoneos-arm.deb
+Size: 31826
+MD5sum: 716ae09b2930fb9d8c0ca0421706eb52
+SHA1: bd0b837083f65f44cb074f2c9dbc0c1c44524337
+SHA256: 51f1f49f6b0829cc3f6f10e657bb62850596b1519d622b345a47fba99d25868f
+
+Package: com.itsallexb.defaultbrowser
+Name: DefaultBrowser (iOS 12)
+Version: 2.0.2
+Architecture: iphoneos-arm
+Description: DefaultBrowser is now DefaultApps (iOS 12), which also lets you choose the mail and maps apps. This empty package installs DefaultApps, which keeps your browser choice. You can remove it afterwards.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: com.itsallexb.defaultapps (>= 3.0.1), firmware (>= 12.0), firmware (<< 13.0)
+Homepage: https://github.com/itsAllexB/DefaultApps-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultbrowser.png
+Filename: debs/com.itsallexb.defaultbrowser_2.0.2_iphoneos-arm.deb
+Size: 848
+MD5sum: 4ec18908e202cb8526c191d84a887793
+SHA1: 1210c1a908e2eaa8113e7b4fd86e3e109232ccad
+SHA256: 5f187a2b8c037e01888793e0e3c185673dd6fa2f2db1d1ba22dd93ace860a7ce
 
 Package: com.itsallexb.filesarchiver
 Name: FilesArchiver (iOS 12)
@@ -64,7 +84,7 @@ SHA256: ee9abba6fbf5749e34659aa1af6ff0e5b4f5395ac640392a192272a89006f105
 
 Package: com.itsallexb.filesextensions
 Name: FilesExtensions (iOS 12)
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Shows file name extensions in the Files app on iOS 12, so patch_dyld.ios and patch_dyld.tvos no longer both look like "patch_dyld". Works in every location, in Recents, Search, the Info sheet, rename, and the Files picker other apps use. Show all, hide only known, or keep the iOS default. Only the display changes; no file is renamed. Settings > Files Extensions.
 Maintainer: itsAllexB
@@ -76,17 +96,17 @@ Homepage: https://github.com/itsAllexB/FilesExtensions-iOS12
 Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesextensions.html
 SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesextensions.json
 Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.filesextensions.png
-Filename: debs/com.itsallexb.filesextensions_1.0.0_iphoneos-arm.deb
-Size: 14922
-MD5sum: 4f29f558cb7d994898a9529c864bddd5
-SHA1: 45f80c8010e56953cdf977a86ebd092a806619d4
-SHA256: c7872a24cd1fce7f2232fe2695078082f1a980c274e9e318f37ab2dd4f641e9c
+Filename: debs/com.itsallexb.filesextensions_1.0.1_iphoneos-arm.deb
+Size: 14648
+MD5sum: b630c5a49f71adf947b3bbce77aa9443
+SHA1: ca88a570ffbe3c6edfccbe8300907ab0c0a1c8d3
+SHA256: b6e4194b4db8e6065cc4aa2eed9e66fc50271afc24f54e3eb54d4063d77b3564
 
 Package: com.itsallexb.filesroot
 Name: FilesRoot (iOS 12)
-Version: 1.0.1
+Version: 1.0.2
 Architecture: iphoneos-arm
-Description: Adds a "System" location to the Files app sidebar that browses the whole filesystem (/) of a jailbroken device. Preview with Quick Look, copy files out to On My iPad, and open them in other apps. Read-only by default; changes can be allowed in Settings > FilesRoot, with system folders always protected.
+Description: Adds a "System" location to the Files app sidebar that browses the whole filesystem (/) of a jailbroken device. Preview with Quick Look, copy files out to On My iPad, and open them in other apps. Read-only by default; changes can be allowed in Settings > Files Root, with system folders always protected.
 Maintainer: itsAllexB
 Author: itsAllexB
 Section: Tweaks
@@ -96,11 +116,11 @@ Homepage: https://github.com/itsAllexB/FilesRoot-iOS12
 Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesroot.html
 SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesroot.json
 Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.filesroot.png
-Filename: debs/com.itsallexb.filesroot_1.0.1_iphoneos-arm.deb
-Size: 55880
-MD5sum: e8e06369140b580a6a1ffd3650650e6a
-SHA1: f6bd95cc8f2cb807ed4591b406309b8aa636710a
-SHA256: 777830f745d0e93b79766204d083aa1bd81f81fb91a029bae63ad99003e29602
+Filename: debs/com.itsallexb.filesroot_1.0.2_iphoneos-arm.deb
+Size: 55866
+MD5sum: 6083af84c46fb5db865b6c4b6f3aca7b
+SHA1: 7374a363065be64d7b84ff86ad15fa0e13143ce7
+SHA256: b972715819c70e9aee2e6faadefd6173578183ebdb2378725de7970e402f00fc
 
 Package: com.itsallexb.splitviewenabler
 Name: SplitViewEnabler (iOS 12)

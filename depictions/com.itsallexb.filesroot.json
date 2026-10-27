@@ -14,7 +14,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > FilesRoot, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
+          "markdown": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > Files Root, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
           "useSpacing": true
         },
         {
@@ -36,7 +36,7 @@
             },
             {
               "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesroot/settings.png",
-              "accessibilityText": "FilesRoot settings page"
+              "accessibilityText": "Files Root settings page"
             }
           ]
         },
@@ -66,7 +66,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Settings > FilesRoot:\n\n- **Enabled**: shows or hides the location in Files.\n- **Name**: the name in the Files sidebar (default \"System\"). Reopen Files to see a new name.\n- **Start Folder**: `/` (default) or `/var/mobile`.\n- **Show Hidden Files** (off): shows names that start with a dot.\n- **Image Thumbnails** (on): thumbnails for images, within strict size limits.\n- **Allow Changes (dangerous)** (off): lets Files create, rename, move, delete and overwrite items, except in protected system locations. Deleting the wrong file can stop the device from booting, and deleting here is permanent.\n- **Open Files**: opens the Files app.",
+          "markdown": "Settings > Files Root:\n\n- **Enabled**: shows or hides the location in Files.\n- **Name**: the name in the Files sidebar (default \"System\"). Reopen Files to see a new name.\n- **Start Folder**: `/` (default) or `/var/mobile`.\n- **Show Hidden Files** (off): shows names that start with a dot.\n- **Image Thumbnails** (on): thumbnails for images, within strict size limits.\n- **Allow Changes (dangerous)** (off): lets Files create, rename, move, delete and overwrite items, except in protected system locations. Deleting the wrong file can stop the device from booting, and deleting here is permanent.\n- **Open Files**: opens the Files app.",
           "useSpacing": true
         },
         {
@@ -84,7 +84,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.1"
+          "text": "1.0.2"
         },
         {
           "class": "DepictionTableTextView",
@@ -132,22 +132,22 @@
       "views": [
         {
           "class": "DepictionSubheaderView",
+          "title": "Version 1.0.2",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Settings: the entry is now called Files Root, like Files Archiver and Files Extensions, and the thumbnail limits are described correctly.\n- Safety and robustness fixes from a full review: thumbnails are limited by image size, so huge or unusual images can't crash the location.\n- Protections: top-level folders, app data containers and every File Provider storage folder can't be deleted or moved; hard-linked files are never overwritten.\n- Links: deleting a link removes only the link, and paths are resolved before they are checked.\n- Free space and limits: copying a folder out checks free space and stops at 20,000 items or 4 GB.\n- Items only root can read are greyed out, and sizes update while a folder is open.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "Version 1.0.1",
           "useBoldText": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- First public release.\n- Safety and robustness fixes from a full review: thumbnails are limited by image size, so huge or unusual images can't crash the location.\n- Protections: top-level folders, app data containers and every File Provider storage folder can't be deleted or moved; hard-linked files are never overwritten.\n- Links: deleting a link removes only the link, and paths are resolved before they are checked.\n- Free space and limits: copying a folder out checks free space and stops at 20,000 items or 4 GB.\n- Items only root can read are greyed out, and sizes update while a folder is open.",
-          "useSpacing": true
-        },
-        {
-          "class": "DepictionSubheaderView",
-          "title": "Version 1.0.0",
-          "useBoldText": true
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "- First version (not published).",
+          "markdown": "- Test versions 1.0.0 and 1.0.1 (not published).",
           "useSpacing": true
         }
       ]

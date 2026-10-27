@@ -9,24 +9,13 @@
       "views": [
         {
           "class": "DepictionSubheaderView",
-          "title": "Open web links in the browser you choose instead of Safari.",
+          "title": "DefaultBrowser is now DefaultApps.",
           "useBoldText": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "On iOS 12 every web link opens in Safari. DefaultBrowser sends the http and https links that other apps open (Mail, Messages, Notes and so on) to the browser you pick instead.\n\nSafari still opens normally from its own icon, and \"Open in Safari\" inside another browser still works. If the browser you picked is removed, links simply go back to Safari.",
+          "markdown": "DefaultBrowser has been replaced by **DefaultApps (iOS 12)**, which also lets you choose the mail app and the maps app.\n\nThis version is an empty package: upgrading to it installs DefaultApps, which keeps the browser you picked. After that you can remove DefaultBrowser; DefaultApps stays installed.",
           "useSpacing": true
-        },
-        {
-          "class": "DepictionScreenshotsView",
-          "itemCornerRadius": 8,
-          "itemSize": "{281, 220}",
-          "screenshots": [
-            {
-              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultbrowser/settings.png",
-              "accessibilityText": "Default Browser settings page"
-            }
-          ]
         },
         {
           "class": "DepictionHeaderView",
@@ -34,7 +23,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Supports Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge and Opera\n- The picker only lists browsers that are installed\n- Falls back to Safari when the chosen browser is missing\n- Replaces the older FirefoxDefault tweak",
+          "markdown": "- Installs DefaultApps (iOS 12) and moves your browser choice over\n- Contains no files of its own; safe to remove after the upgrade",
           "useSpacing": true
         },
         {
@@ -43,7 +32,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Settings > Default Browser:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**: the browser that web links open in. Only installed browsers are listed; the note below the list names the other supported browsers.\n\nMicrosoft Edge and Opera use link formats that are not officially documented. They are offered only when the installed app supports them.",
+          "markdown": "None. The settings are in Settings > Default Apps.",
           "useSpacing": true
         },
         {
@@ -52,7 +41,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)",
+          "markdown": "- iOS 12.x, like DefaultApps",
           "useSpacing": true
         },
         {
@@ -61,7 +50,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "2.0.1"
+          "text": "2.0.2"
         },
         {
           "class": "DepictionTableTextView",
@@ -71,7 +60,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Size",
-          "text": "18 KB"
+          "text": "1 KB"
         },
         {
           "class": "DepictionTableTextView",
@@ -81,13 +70,13 @@
         {
           "class": "DepictionTableButtonView",
           "title": "Source Code",
-          "action": "https://github.com/itsAllexB/DefaultBrowser-iOS12",
+          "action": "https://github.com/itsAllexB/DefaultApps-iOS12",
           "openExternal": true
         },
         {
           "class": "DepictionTableButtonView",
           "title": "Report a Problem",
-          "action": "https://github.com/itsAllexB/DefaultBrowser-iOS12/issues",
+          "action": "https://github.com/itsAllexB/DefaultApps-iOS12/issues",
           "openExternal": true
         },
         {
@@ -107,6 +96,16 @@
       "tabname": "Changelog",
       "class": "DepictionStackView",
       "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 2.0.2",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- DefaultBrowser is now DefaultApps. This empty package installs DefaultApps, which keeps your browser choice. You can remove it afterwards.",
+          "useSpacing": true
+        },
         {
           "class": "DepictionSubheaderView",
           "title": "Version 2.0.1",

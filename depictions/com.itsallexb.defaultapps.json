@@ -84,7 +84,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "3.0.0"
+          "text": "3.0.1"
         },
         {
           "class": "DepictionTableTextView",
@@ -132,12 +132,22 @@
       "views": [
         {
           "class": "DepictionSubheaderView",
+          "title": "Version 3.0.1",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First release as DefaultApps (successor of DefaultBrowser 2.0.1).\n- Choose the mail app and the maps app, as well as the browser.\n- Replaces DefaultBrowser and keeps your browser choice. DefaultBrowser users get it with a normal upgrade.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "Version 3.0.0",
           "useBoldText": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- First release as DefaultApps (successor of DefaultBrowser 2.0.1).\n- Choose the mail app and the maps app, as well as the browser.\n- Replaces DefaultBrowser and keeps your browser choice.",
+          "markdown": "- Test version (not published).",
           "useSpacing": true
         }
       ]

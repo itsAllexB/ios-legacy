@@ -20,15 +20,11 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{228, 300}",
+          "itemSize": "{213, 300}",
           "screenshots": [
             {
               "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-portrait.jpg",
               "accessibilityText": "Weather in portrait"
-            },
-            {
-              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-split-view.jpg",
-              "accessibilityText": "Weather in Split View"
             },
             {
               "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/weatherpad/weather-slide-over.jpg",

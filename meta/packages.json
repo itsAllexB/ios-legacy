@@ -84,7 +84,6 @@
         {"file": "weather-portrait.jpg", "alt": "Weather in portrait"},
         {"file": "weather-landscape.jpg", "alt": "Weather in landscape, two columns"},
         {"file": "weather-thunderstorm.jpg", "alt": "Animated thunderstorm background"},
-        {"file": "weather-split-view.jpg", "alt": "Weather in Split View"},
         {"file": "weather-slide-over.jpg", "alt": "Weather in Slide Over"},
         {"file": "settings.png", "alt": "Weather for iPad settings page"}
       ],

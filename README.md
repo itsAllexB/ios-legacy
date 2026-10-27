@@ -22,11 +22,13 @@ Or open your package manager, go to Sources, tap Add (or Edit, then Add) and ent
 
 ## Packages
 
+<!-- packages:start -->
 | Package | Version | What it does |
 | --- | --- | --- |
-| [SplitViewEnabler](https://github.com/itsAllexB/SplitViewEnabler-iOS12) | 2.0.0 | Split View and Slide Over on iPads that only had Slide Over (iPad mini 2/3, iPad Air). |
-| [DefaultBrowser](https://github.com/itsAllexB/DefaultBrowser-iOS12) | 2.0.0 | Open web links in Firefox, Chrome, Brave or another browser instead of Safari. |
-| [WeatherPad](https://github.com/itsAllexB/WeatherPad-iOS12) | 1.2.2 | Apple's iPhone Weather app, running natively on iPad. |
+| [DefaultBrowser (iOS 12)](https://github.com/itsAllexB/DefaultBrowser-iOS12) | 2.0.1 | Open web links in the browser you choose instead of Safari. |
+| [SplitViewEnabler (iOS 12)](https://github.com/itsAllexB/SplitViewEnabler-iOS12) | 2.0.1 | Split View and Slide Over on iPads that only had Slide Over. |
+| [WeatherPad (iOS 12)](https://github.com/itsAllexB/WeatherPad-iOS12) | 1.2.3 | Apple's iPhone Weather app, running natively on iPad. |
+<!-- packages:end -->
 
 All packages are tested on an iPad mini 2 with iOS 12.5.8 (checkra1n + odysseyra1n / libhooker) and should work on iOS 12.x. Each package page in your package manager has screenshots, settings and compatibility details.
 

@@ -308,6 +308,19 @@ def index_page(latest, meta_all, base):
     return page(repo["name"], body, base, 0)
 
 
+def readme_table(latest, meta_all):
+    """Package table for README.md, between the packages:start/end markers."""
+    rows = ["| Package | Version | What it does |", "| --- | --- | --- |"]
+    for pkg in sorted(latest, key=lambda p: latest[p][0].get("Name", p).lower()):
+        ctl, _ = latest[pkg]
+        m = meta_all["packages"].get(pkg, {})
+        name = ctl.get("Name", pkg)
+        link = f"[{name}](https://github.com/{m['github']})" if m.get("github") else name
+        tagline = m.get("tagline") or ctl.get("Description", "").split("\n")[0]
+        rows.append(f"| {link} | {ctl['Version']} | {tagline} |")
+    return "\n".join(rows) + "\n"
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--url", default=os.environ.get("REPO_URL", "https://itsallexb.github.io/ios-legacy/"))
@@ -391,6 +404,13 @@ def main():
         write_if_changed(f"depictions/{pkg}.json", json.dumps(sileo_depiction(pkg, ctl, m, base, size), indent=2) + "\n")
         write_if_changed(f"depictions/{pkg}.html", cydia_depiction(pkg, ctl, m, base, size))
     write_if_changed("index.html", index_page(latest, meta_all, base).replace("{FPR}", html.escape(args.fingerprint or "see ios-legacy.asc")))
+    with open("README.md") as f:
+        readme = f.read()
+    start, end = "<!-- packages:start -->\n", "<!-- packages:end -->"
+    if start in readme and end in readme:
+        head, rest = readme.split(start, 1)
+        readme = head + start + readme_table(latest, meta_all) + end + rest.split(end, 1)[1]
+        write_if_changed("README.md", readme.encode())
 
     for pkg, (ctl, _) in sorted(latest.items()):
         print(f"  {pkg} {ctl['Version']}")

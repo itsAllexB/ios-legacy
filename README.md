@@ -41,7 +41,11 @@ iOS Legacy Repo (itsAllexB)
 FC19 4D0E 4C4D 77E5 0B3E  153A 724C CD61 F96D E214
 ```
 
-The public key is in [`ios-legacy.asc`](ios-legacy.asc) and, as a binary keyring for `/etc/apt/trusted.gpg.d/`, in [`ios-legacy.gpg`](ios-legacy.gpg). Package managers on iOS add sources without a key, so you don't need to install it.
+The public key is in [`ios-legacy.asc`](ios-legacy.asc) and, as a binary keyring for `/etc/apt/trusted.gpg.d/`, in [`ios-legacy.gpg`](ios-legacy.gpg). Sileo, Zebra and Cydia add the source without the key, so you don't need to install it there. If you use `apt` from the command line, it refuses the source until it knows the key:
+
+```sh
+curl -fsSL https://itsallexb.github.io/ios-legacy/ios-legacy.gpg -o /etc/apt/trusted.gpg.d/ios-legacy.gpg
+```
 
 ## How the repo is built
 

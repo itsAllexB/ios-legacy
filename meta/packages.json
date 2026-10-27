@@ -91,6 +91,170 @@
         {"version": "1.2.3", "changes": ["Renamed to include \"(iOS 12)\" in the name.", "Now installs only on iOS 12.x."]},
         {"version": "1.2.2", "changes": ["First public release.", "Native iPad layout, Today widget fix, animated backgrounds, header fade and snap fixes, iPhone layout option."]}
       ]
+    },
+    "com.itsallexb.filesarchiver": {
+      "short": "filesarchiver",
+      "github": "itsAllexB/FilesArchiver-iOS12",
+      "tint": "#AF52DE",
+      "tagline": "Uncompress and Compress in the Files app, like iOS 13.",
+      "description": "On iOS 12 the Files app can only peek into a zip file. It can't extract it, and it can't make archives at all.\n\nFilesArchiver adds **Uncompress** and **Compress** to the menu you get when you touch and hold an item, and **Compress** to the top bar when you select several items. It opens zip (including password-protected zips), 7z, rar, tar, tar.gz and many more, and creates zip, tar.gz or 7z archives.\n\nArchives are treated as untrusted: everything is extracted into a private folder and checked first, `../` paths and unsafe links are dropped, and nothing is ever written over an existing file.",
+      "features": [
+        "Uncompress zip (with a password prompt for password-protected zips), 7z, rar and rar5, tar, tar.gz, tar.bz2, tar.xz, tar.zst, gz, bz2, xz, zst, lz4, cpio, xar, iso, cab, lha, deb, ipa, cbz/cbr/cb7",
+        "Compress to zip (default), tar.gz or 7z: one file, several files or folders",
+        "Names like iOS 13: Name.zip, Archive.zip, and \" 2\" instead of overwriting anything",
+        "Progress with Cancel; the work runs in the background and memory use stays flat, even for very large archives",
+        "Keeps at least 500 MB free on the device; a job that can't finish stops, cleans up and says why",
+        "Settings: format, extract into a folder, delete the archive after extracting (to Recently Deleted), skip Mac metadata"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)",
+        "Needs libarchive13 from Procursus (installed automatically)",
+        "Password-protected 7z and rar archives and multi-volume archives are not supported"
+      ],
+      "settings": "Settings > Files Archiver:\n\n- **Enabled**: turns the tweak on or off.\n- **Format**: what Compress creates: *Zip* (default, opens almost everywhere), *Tar + Gzip* (keeps file permissions) or *7-Zip* (smallest, slower).\n- **Extract into a Folder** (on): an archive with several items is extracted into a folder named after it.\n- **Delete Archive After Extracting** (off): moves the archive to Recently Deleted after a successful extraction.\n- **Skip Mac Metadata** (on): leaves out `__MACOSX` folders, `._` files and `.DS_Store`.\n\nChanges apply right away.",
+      "screenshots": [
+        {"file": "menu.png", "alt": "Uncompress and Compress in the Files menu"},
+        {"file": "compress.png", "alt": "Compress in the selection bar"},
+        {"file": "progress.png", "alt": "Uncompressing progress with Cancel"},
+        {"file": "result.png", "alt": "Extracted folders next to their archives"},
+        {"file": "settings.png", "alt": "Files Archiver settings page"}
+      ],
+      "changelog": [
+        {"version": "1.0.1", "changes": ["First public release.", "Safety and robustness fixes from a full review: memory use stays flat for huge archives and archives with tens of thousands of files.", "Links: only relative links that stay inside their own extracted item are kept; nothing is ever written through a link.", "Free space: keeps at least 500 MB free; a job that can't finish stops and removes what it wrote.", "Names over 255 bytes and paths nested too deeply are skipped and counted instead of failing the job.", "Refused at once, with a message, where new items aren't accepted (the top level of On My iPad, read-only locations).", "Clearer progress and messages: many small files, several jobs at once, archives with only hidden items, jobs stopped by iOS in the background."]},
+        {"version": "1.0.0", "changes": ["First version (not published)."]}
+      ]
+    },
+    "com.itsallexb.filesroot": {
+      "short": "filesroot",
+      "github": "itsAllexB/FilesRoot-iOS12",
+      "tint": "#5E687C",
+      "tagline": "Browse the whole filesystem in the Files app. Read-only by default.",
+      "description": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > FilesRoot, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
+      "features": [
+        "A \"System\" location in Files, starting at / or at /var/mobile, with a name you can change",
+        "Quick Look previews, copying files and folders out, sharing and opening in other apps",
+        "Image thumbnails with strict memory limits",
+        "Optional hidden files",
+        "Also works in the Files picker that other apps show (Open, Save to Files)",
+        "Read-only by default; an optional \"Allow Changes (dangerous)\" switch with a permanent list of protected system locations"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)",
+        "Works alongside FilesArchiver and FilesExtensions"
+      ],
+      "settings": "Settings > FilesRoot:\n\n- **Enabled**: shows or hides the location in Files.\n- **Name**: the name in the Files sidebar (default \"System\"). Reopen Files to see a new name.\n- **Start Folder**: `/` (default) or `/var/mobile`.\n- **Show Hidden Files** (off): shows names that start with a dot.\n- **Image Thumbnails** (on): thumbnails for images, within strict size limits.\n- **Allow Changes (dangerous)** (off): lets Files create, rename, move, delete and overwrite items, except in protected system locations. Deleting the wrong file can stop the device from booting, and deleting here is permanent.\n- **Open Files**: opens the Files app.",
+      "screenshots": [
+        {"file": "sidebar.png", "alt": "System location in the Files sidebar"},
+        {"file": "browse-root.png", "alt": "The root folder in the System location"},
+        {"file": "read-only.png", "alt": "This location is read-only alert"},
+        {"file": "protected.png", "alt": "Protected system location alert"},
+        {"file": "settings.png", "alt": "FilesRoot settings page"}
+      ],
+      "changelog": [
+        {"version": "1.0.1", "changes": ["First public release.", "Safety and robustness fixes from a full review: thumbnails are limited by image size, so huge or unusual images can't crash the location.", "Protections: top-level folders, app data containers and every File Provider storage folder can't be deleted or moved; hard-linked files are never overwritten.", "Links: deleting a link removes only the link, and paths are resolved before they are checked.", "Free space and limits: copying a folder out checks free space and stops at 20,000 items or 4 GB.", "Items only root can read are greyed out, and sizes update while a folder is open."]},
+        {"version": "1.0.0", "changes": ["First version (not published)."]}
+      ]
+    },
+    "com.itsallexb.filesextensions": {
+      "short": "filesextensions",
+      "github": "itsAllexB/FilesExtensions-iOS12",
+      "tint": "#0091A0",
+      "tagline": "Show or hide file name extensions in the Files app.",
+      "description": "iOS 12's Files app drops the last extension of every file, whatever it is: `a.txt` shows as \"a\", and `patch_dyld.ios` and `patch_dyld.tvos` both show as \"patch_dyld\". FilesExtensions shows the full names. You can also hide only the extensions iOS knows, like the Finder on a Mac, or keep the iOS behaviour.\n\nOnly what you see changes. No file is renamed.",
+      "features": [
+        "Show All Extensions (default), Hide Known Extensions, or Hide All Extensions (iOS Default)",
+        "Every location, list and icon view, Recents, Search, the Info sheet, the Files picker other apps open, and the Dock recents popover",
+        "Rename edits the full name when extensions are shown, and never doubles an extension you type",
+        "Optionally always shows every extension in FilesRoot's System location",
+        "Changes apply right away, no respring needed"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)",
+        "Works alongside FilesRoot and FilesArchiver"
+      ],
+      "settings": "Settings > Files Extensions:\n\n- **Enabled**: turns the tweak on or off.\n- **Show Extensions**: *Show All Extensions* (default), *Hide Known Extensions* or *Hide All Extensions (iOS Default)*.\n- **Always Show in System** (on): always shows every extension in FilesRoot's System location.\n\nChanges apply right away to open Files windows.",
+      "screenshots": [
+        {"file": "before.png", "alt": "Before: files without extensions"},
+        {"file": "after.png", "alt": "After: files with their full names"},
+        {"file": "hide-known.png", "alt": "Hide Known Extensions mode"},
+        {"file": "settings.png", "alt": "Files Extensions settings page"}
+      ],
+      "changelog": [
+        {"version": "1.0.0", "changes": ["First public release."]}
+      ]
+    },
+    "com.itsallexb.batteryplus": {
+      "short": "batteryplus",
+      "github": "itsAllexB/BatteryPlus-iOS12",
+      "tint": "#2DA44E",
+      "tagline": "Low Power Mode, Battery Health and battery colours for iOS 12 iPads.",
+      "description": "On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.\n\n**Low Power Mode** appears in Settings > Battery and, with CCSupport, in Control Center. It is the real iOS mode: mail fetch, iCloud Photos, dynamic wallpapers and other background work pause, and iOS turns it off again at 80%. **Battery Health** shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself. The **status bar** battery turns yellow in Low Power Mode, green while charging and red at 20% or less, and can show its percentage inside the icon.\n\n**Charge Limit** is shown as unavailable on A7 iPads such as the iPad mini 2: their charger ignores the request to pause charging, and BatteryPlus doesn't use unsafe workarounds. An optional **Unplug Reminder** tells you when the iPad has charged to the level you choose.",
+      "features": [
+        "Low Power Mode switch in Settings > Battery, as on iPhone",
+        "Low Power Mode module for Control Center (needs CCSupport)",
+        "Battery Health: Maximum Capacity, Cycle Count and Manufacture Date",
+        "Unplug Reminder at 80, 85, 90, 95 or 100%",
+        "Status bar battery colours: yellow in Low Power Mode, green while charging, red at 20% or less",
+        "Optional percentage inside the battery icon",
+        "No timers: nothing runs while idle"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on other iOS 12 iPads; battery data depends on what each battery reports",
+        "Control Center module: install CCSupport (recommended)",
+        "No charge limit on A7 iPads, and Low Power Mode doesn't slow the CPU there"
+      ],
+      "settings": "Settings > Battery:\n\n- **Low Power Mode**: Apple's switch, at the top of the page.\n- **Battery Health**: Maximum Capacity, Cycle Count and Manufacture Date.\n- **Charging**: Charge Limit (shown as unavailable on A7 iPads, with the reason), **Unplug Reminder** (off) and **Remind At** (80% to 100%).\n- **Status Bar**: **Battery Colours** (on) and **Percentage Inside Icon** (off; needs Battery Percentage on).\n\nControl Center: Settings > Control Center > Customize Controls > Low Power Mode (needs CCSupport).",
+      "screenshots": [
+        {"file": "battery.png", "alt": "Settings > Battery with Low Power Mode, Battery Health, Charging and Status Bar"},
+        {"file": "low-power-mode.png", "alt": "Low Power Mode on, with a yellow battery"},
+        {"file": "battery-health.png", "alt": "Battery Health page"},
+        {"file": "charging.png", "alt": "Charging page with the Unplug Reminder"},
+        {"file": "unplug-reminder.png", "alt": "Unplug Reminder alert"},
+        {"file": "status-bar-settings.png", "alt": "Status Bar settings"},
+        {"file": "control-center.png", "alt": "Low Power Mode module in Control Center"},
+        {"file": "status-bar-colours.png", "alt": "Status bar battery colours"},
+        {"file": "status-bar-percent.png", "alt": "Percentage inside the battery icon"},
+        {"file": "status-bar-apps.png", "alt": "Percentage inside the icon in Files and Safari"}
+      ],
+      "changelog": [
+        {"version": "1.1.0", "changes": ["First public release.", "Low Power Mode in Settings and Control Center, status bar battery colours and the percentage inside the icon, alongside Battery Health and the Unplug Reminder."]}
+      ]
+    },
+    "com.itsallexb.defaultapps": {
+      "short": "defaultapps",
+      "github": "itsAllexB/DefaultApps-iOS12",
+      "tint": "#5856D6",
+      "tagline": "Choose your default browser, mail app and maps app.",
+      "description": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nDefaultApps is the successor of DefaultBrowser. Installing it replaces DefaultBrowser and keeps your browser choice; Mail and Maps start on Default (Apple), so nothing else changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
+      "features": [
+        "Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera",
+        "Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in",
+        "Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route",
+        "Email addresses tapped in Notes, Messages and other text open in the chosen mail app",
+        "Only installed apps are offered, plus Default (Apple)",
+        "Replaces DefaultBrowser and keeps its settings"
+      ],
+      "compatibility": [
+        "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
+        "Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)",
+        "The apps must be installed and still run on iOS 12",
+        "Apps that show Apple's own mail sheet (\"Share by Mail\") still use Apple Mail, as on iOS 14"
+      ],
+      "settings": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Only installed apps are listed; the note under each list names the other supported apps.",
+      "screenshots": [
+        {"file": "settings.png", "alt": "Default Apps settings page"},
+        {"file": "maps-picker.png", "alt": "Maps picker with Default (Apple) and Google Maps"},
+        {"file": "google-maps-place.jpg", "alt": "An Apple Maps link opened in Google Maps"},
+        {"file": "google-maps-route.png", "alt": "An Apple Maps route opened in Google Maps"},
+        {"file": "mailto-fields.png", "alt": "The fields a mail app receives from a mailto link"}
+      ],
+      "changelog": [
+        {"version": "3.0.0", "changes": ["First release as DefaultApps (successor of DefaultBrowser 2.0.1).", "Choose the mail app and the maps app, as well as the browser.", "Replaces DefaultBrowser and keeps your browser choice."]}
+      ]
     }
   }
 }

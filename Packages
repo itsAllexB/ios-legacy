@@ -1,25 +1,106 @@
-Package: com.itsallexb.defaultbrowser
-Name: DefaultBrowser (iOS 12)
-Version: 2.0.1
+Package: com.itsallexb.batteryplus
+Name: BatteryPlus (iOS 12)
+Version: 1.1.0
 Architecture: iphoneos-arm
-Description: Opens http/https links from other apps in the browser you pick (Firefox, Chrome, Brave, DuckDuckGo, Edge, Firefox Focus...) instead of Safari (iOS 12). Settings > Default Browser. Replaces FirefoxDefault.
+Description: Battery features of current iOS for iOS 12 iPads. Low Power Mode in Settings > Battery and in Control Center (with CCSupport), battery colours in the status bar (yellow in Low Power Mode, green while charging, red at 20%) and an optional percentage inside the battery icon. Battery Health with Maximum Capacity, Cycle Count and Manufacture Date from the battery's gas gauge, and an optional Unplug Reminder.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 12.0), firmware (<< 13.0)
+Installed-Size: 256
+Homepage: https://github.com/itsAllexB/BatteryPlus-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.batteryplus.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.batteryplus.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.batteryplus.png
+Filename: debs/com.itsallexb.batteryplus_1.1.0_iphoneos-arm.deb
+Size: 24854
+MD5sum: 43fe8c613a67e8ac953c68686d531967
+SHA1: 7dc18277951d5186a2d1b0b78d95106e3f4ddf8c
+SHA256: 001ab49434e961e80b83f4888cd001b9a94a383408accefc188f4b2c5485b878
+Recommends: com.opa334.ccsupport
+
+Package: com.itsallexb.defaultapps
+Name: DefaultApps (iOS 12)
+Version: 3.0.0
+Architecture: iphoneos-arm
+Description: Choose your default browser, mail app and maps app on iOS 12, like iOS 14. Web links open in Firefox, Chrome, Brave, DuckDuckGo and more; mailto: links open in Gmail, Outlook, Spark, Yahoo Mail, Proton Mail and more; Apple Maps links open in Google Maps, Waze and more. Only installed apps are offered. Settings > Default Apps. Replaces DefaultBrowser.
 Maintainer: itsAllexB
 Author: itsAllexB
 Section: Tweaks
 Depends: mobilesubstrate, firmware (>= 12.0), firmware (<< 13.0), preferenceloader
-Conflicts: com.itsallexb.firefoxdefault
-Replaces: com.itsallexb.firefoxdefault
-Provides: com.itsallexb.firefoxdefault
-Installed-Size: 140
-Homepage: https://github.com/itsAllexB/DefaultBrowser-iOS12
-Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.html
-SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.json
-Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultbrowser.png
-Filename: debs/com.itsallexb.defaultbrowser_2.0.1_iphoneos-arm.deb
-Size: 18834
-MD5sum: dec61ffbe4678353a052fbf9ce4d2726
-SHA1: 90914c47d0e394694e4716d78a1da7989a16f9bc
-SHA256: ae8d51e45a769484f569cdec76b70b4adcd6f82fea2b254f66753e51ac5e22f7
+Conflicts: com.itsallexb.defaultbrowser, com.itsallexb.firefoxdefault
+Replaces: com.itsallexb.defaultbrowser, com.itsallexb.firefoxdefault
+Provides: com.itsallexb.defaultbrowser, com.itsallexb.firefoxdefault
+Installed-Size: 224
+Homepage: https://github.com/itsAllexB/DefaultApps-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultapps.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultapps.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultapps.png
+Filename: debs/com.itsallexb.defaultapps_3.0.0_iphoneos-arm.deb
+Size: 31818
+MD5sum: 6a913631b471752699aff1f49998da26
+SHA1: 869345ac743128ebc62cecb0779146e892eb3be6
+SHA256: 77e922cbde1b99e2339c15e6ea46c5e9343333d9e01841e7753a50d3dbe4ad02
+
+Package: com.itsallexb.filesarchiver
+Name: FilesArchiver (iOS 12)
+Version: 1.0.1
+Architecture: iphoneos-arm
+Description: Uncompress and Compress in the Files app on iOS 12, like iOS 13. Extracts zip, 7z, rar, tar, tar.gz, tar.bz2, tar.xz, gz, bz2, xz and more; creates zip, tar.gz or 7z. Settings > Files Archiver.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 12.0), firmware (<< 13.0), libarchive13 (>= 3.6)
+Installed-Size: 216
+Homepage: https://github.com/itsAllexB/FilesArchiver-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesarchiver.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesarchiver.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.filesarchiver.png
+Filename: debs/com.itsallexb.filesarchiver_1.0.1_iphoneos-arm.deb
+Size: 40676
+MD5sum: e5486de47966d52c39129f22433d3673
+SHA1: 10915f40f85ee4aeba6da107c73668b56e006e53
+SHA256: ee9abba6fbf5749e34659aa1af6ff0e5b4f5395ac640392a192272a89006f105
+
+Package: com.itsallexb.filesextensions
+Name: FilesExtensions (iOS 12)
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Shows file name extensions in the Files app on iOS 12, so patch_dyld.ios and patch_dyld.tvos no longer both look like "patch_dyld". Works in every location, in Recents, Search, the Info sheet, rename, and the Files picker other apps use. Show all, hide only known, or keep the iOS default. Only the display changes; no file is renamed. Settings > Files Extensions.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 12.0), firmware (<< 13.0)
+Installed-Size: 136
+Homepage: https://github.com/itsAllexB/FilesExtensions-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesextensions.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesextensions.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.filesextensions.png
+Filename: debs/com.itsallexb.filesextensions_1.0.0_iphoneos-arm.deb
+Size: 14922
+MD5sum: 4f29f558cb7d994898a9529c864bddd5
+SHA1: 45f80c8010e56953cdf977a86ebd092a806619d4
+SHA256: c7872a24cd1fce7f2232fe2695078082f1a980c274e9e318f37ab2dd4f641e9c
+
+Package: com.itsallexb.filesroot
+Name: FilesRoot (iOS 12)
+Version: 1.0.1
+Architecture: iphoneos-arm
+Description: Adds a "System" location to the Files app sidebar that browses the whole filesystem (/) of a jailbroken device. Preview with Quick Look, copy files out to On My iPad, and open them in other apps. Read-only by default; changes can be allowed in Settings > FilesRoot, with system folders always protected.
+Maintainer: itsAllexB
+Author: itsAllexB
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 12.0), firmware (<< 13.0)
+Installed-Size: 336
+Homepage: https://github.com/itsAllexB/FilesRoot-iOS12
+Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesroot.html
+SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.filesroot.json
+Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.filesroot.png
+Filename: debs/com.itsallexb.filesroot_1.0.1_iphoneos-arm.deb
+Size: 55880
+MD5sum: e8e06369140b580a6a1ffd3650650e6a
+SHA1: f6bd95cc8f2cb807ed4591b406309b8aa636710a
+SHA256: 777830f745d0e93b79766204d083aa1bd81f81fb91a029bae63ad99003e29602
 
 Package: com.itsallexb.splitviewenabler
 Name: SplitViewEnabler (iOS 12)

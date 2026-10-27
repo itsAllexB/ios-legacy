@@ -1,0 +1,156 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#5E687C",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Browse the whole filesystem in the Files app. Read-only by default.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > FilesRoot, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{209, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesroot/browse-root.png",
+              "accessibilityText": "The root folder in the System location"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesroot/read-only.png",
+              "accessibilityText": "This location is read-only alert"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesroot/protected.png",
+              "accessibilityText": "Protected system location alert"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesroot/settings.png",
+              "accessibilityText": "FilesRoot settings page"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{293, 220}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesroot/sidebar.png",
+              "accessibilityText": "System location in the Files sidebar"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- A \"System\" location in Files, starting at / or at /var/mobile, with a name you can change\n- Quick Look previews, copying files and folders out, sharing and opening in other apps\n- Image thumbnails with strict memory limits\n- Optional hidden files\n- Also works in the Files picker that other apps show (Open, Save to Files)\n- Read-only by default; an optional \"Allow Changes (dangerous)\" switch with a permanent list of protected system locations",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > FilesRoot:\n\n- **Enabled**: shows or hides the location in Files.\n- **Name**: the name in the Files sidebar (default \"System\"). Reopen Files to see a new name.\n- **Start Folder**: `/` (default) or `/var/mobile`.\n- **Show Hidden Files** (off): shows names that start with a dot.\n- **Image Thumbnails** (on): thumbnails for images, within strict size limits.\n- **Allow Changes (dangerous)** (off): lets Files create, rename, move, delete and overwrite items, except in protected system locations. Deleting the wrong file can stop the device from booting, and deleting here is permanent.\n- **Open Files**: opens the Files app.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)\n- Works alongside FilesArchiver and FilesExtensions",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "55 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/FilesRoot-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/FilesRoot-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.0.1",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Safety and robustness fixes from a full review: thumbnails are limited by image size, so huge or unusual images can't crash the location.\n- Protections: top-level folders, app data containers and every File Provider storage folder can't be deleted or moved; hard-linked files are never overwritten.\n- Links: deleting a link removes only the link, and paths are resolved before they are checked.\n- Free space and limits: copying a folder out checks free space and stops at 20,000 items or 4 GB.\n- Items only root can read are greyed out, and sizes update while a folder is open.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.0.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First version (not published).",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

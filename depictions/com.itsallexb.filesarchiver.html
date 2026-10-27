@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FilesArchiver (iOS 12)</title>
+<link rel="stylesheet" href="../depictions/style.css">
+</head>
+<body>
+<main>
+<div class="card head"><img src="../icons/com.itsallexb.filesarchiver.png" alt="">
+<div><h1>FilesArchiver (iOS 12)</h1><div class="muted">Uncompress and Compress in the Files app, like iOS 13.</div></div></div>
+<div class="card"><p>On iOS 12 the Files app can only peek into a zip file. It can't extract it, and it can't make archives at all.</p>
+<p>FilesArchiver adds <strong>Uncompress</strong> and <strong>Compress</strong> to the menu you get when you touch and hold an item, and <strong>Compress</strong> to the top bar when you select several items. It opens zip (including password-protected zips), 7z, rar, tar, tar.gz and many more, and creates zip, tar.gz or 7z archives.</p>
+<p>Archives are treated as untrusted: everything is extracted into a private folder and checked first, <code>../</code> paths and unsafe links are dropped, and nothing is ever written over an existing file.</p></div>
+<div class="card"><h2>Screenshots</h2><div class="shots"><img src="screenshots/filesarchiver/menu.png" alt="Uncompress and Compress in the Files menu" loading="lazy"><img src="screenshots/filesarchiver/compress.png" alt="Compress in the selection bar" loading="lazy"><img src="screenshots/filesarchiver/progress.png" alt="Uncompressing progress with Cancel" loading="lazy"><img src="screenshots/filesarchiver/result.png" alt="Extracted folders next to their archives" loading="lazy"><img src="screenshots/filesarchiver/settings.png" alt="Files Archiver settings page" loading="lazy"></div></div>
+<div class="card"><h2>Features</h2><ul><li>Uncompress zip (with a password prompt for password-protected zips), 7z, rar and rar5, tar, tar.gz, tar.bz2, tar.xz, tar.zst, gz, bz2, xz, zst, lz4, cpio, xar, iso, cab, lha, deb, ipa, cbz/cbr/cb7</li><li>Compress to zip (default), tar.gz or 7z: one file, several files or folders</li><li>Names like iOS 13: Name.zip, Archive.zip, and " 2" instead of overwriting anything</li><li>Progress with Cancel; the work runs in the background and memory use stays flat, even for very large archives</li><li>Keeps at least 500 MB free on the device; a job that can't finish stops, cleans up and says why</li><li>Settings: format, extract into a folder, delete the archive after extracting (to Recently Deleted), skip Mac metadata</li></ul></div>
+<div class="card"><h2>Settings</h2><p>Settings &gt; Files Archiver:</p>
+<ul><li><strong>Enabled</strong>: turns the tweak on or off.</li><li><strong>Format</strong>: what Compress creates: <em>Zip</em> (default, opens almost everywhere), <em>Tar + Gzip</em> (keeps file permissions) or <em>7-Zip</em> (smallest, slower).</li><li><strong>Extract into a Folder</strong> (on): an archive with several items is extracted into a folder named after it.</li><li><strong>Delete Archive After Extracting</strong> (off): moves the archive to Recently Deleted after a successful extraction.</li><li><strong>Skip Mac Metadata</strong> (on): leaves out <code>__MACOSX</code> folders, <code>._</code> files and <code>.DS_Store</code>.</li></ul>
+<p>Changes apply right away.</p></div>
+<div class="card"><h2>Compatibility</h2><ul><li>Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)</li><li>Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)</li><li>Needs libarchive13 from Procursus (installed automatically)</li><li>Password-protected 7z and rar archives and multi-volume archives are not supported</li></ul></div>
+<div class="card"><h2>Changelog</h2><p><strong>Version 1.0.1</strong></p><ul><li>First public release.</li><li>Safety and robustness fixes from a full review: memory use stays flat for huge archives and archives with tens of thousands of files.</li><li>Links: only relative links that stay inside their own extracted item are kept; nothing is ever written through a link.</li><li>Free space: keeps at least 500 MB free; a job that can't finish stops and removes what it wrote.</li><li>Names over 255 bytes and paths nested too deeply are skipped and counted instead of failing the job.</li><li>Refused at once, with a message, where new items aren't accepted (the top level of On My iPad, read-only locations).</li><li>Clearer progress and messages: many small files, several jobs at once, archives with only hidden items, jobs stopped by iOS in the background.</li></ul><p><strong>Version 1.0.0</strong></p><ul><li>First version (not published).</li></ul></div>
+<div class="card"><h2>Information</h2><table>
+<tr><td>Version</td><td>1.0.1</td></tr>
+<tr><td>Developer</td><td>itsAllexB</td></tr>
+<tr><td>Size</td><td>40 KB</td></tr>
+<tr><td>License</td><td>GPL-3.0</td></tr>
+<tr><td>Source code</td><td><a href="https://github.com/itsAllexB/FilesArchiver-iOS12">GitHub</a></td></tr>
+<tr><td>Problems</td><td><a href="https://github.com/itsAllexB/FilesArchiver-iOS12/issues">Report an issue</a></td></tr>
+</table></div>
+<p class="muted small">Unofficial. Not affiliated with or endorsed by Apple.</p>
+</main>
+</body>
+</html>

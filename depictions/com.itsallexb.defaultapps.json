@@ -1,0 +1,146 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#5856D6",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Choose your default browser, mail app and maps app.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nDefaultApps is the successor of DefaultBrowser. Installing it replaces DefaultBrowser and keeps your browser choice; Mail and Maps start on Default (Apple), so nothing else changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{238, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/settings.png",
+              "accessibilityText": "Default Apps settings page"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/google-maps-place.jpg",
+              "accessibilityText": "An Apple Maps link opened in Google Maps"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/google-maps-route.png",
+              "accessibilityText": "An Apple Maps route opened in Google Maps"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{433, 220}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/maps-picker.png",
+              "accessibilityText": "Maps picker with Default (Apple) and Google Maps"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/mailto-fields.png",
+              "accessibilityText": "The fields a mail app receives from a mailto link"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera\n- Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in\n- Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route\n- Email addresses tapped in Notes, Messages and other text open in the chosen mail app\n- Only installed apps are offered, plus Default (Apple)\n- Replaces DefaultBrowser and keeps its settings",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Only installed apps are listed; the note under each list names the other supported apps.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)\n- The apps must be installed and still run on iOS 12\n- Apps that show Apple's own mail sheet (\"Share by Mail\") still use Apple Mail, as on iOS 14",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "3.0.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "31 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/DefaultApps-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/DefaultApps-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 3.0.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First release as DefaultApps (successor of DefaultBrowser 2.0.1).\n- Choose the mail app and the maps app, as well as the browser.\n- Replaces DefaultBrowser and keeps your browser choice.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

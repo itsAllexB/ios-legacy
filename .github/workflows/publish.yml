@@ -33,7 +33,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p incoming
-          for repo in itsAllexB/SplitViewEnabler-iOS12 itsAllexB/DefaultBrowser-iOS12 itsAllexB/WeatherPad-iOS12; do
+          for repo in itsAllexB/SplitViewEnabler-iOS12 itsAllexB/WeatherPad-iOS12 \
+                      itsAllexB/DefaultApps-iOS12 itsAllexB/FilesArchiver-iOS12 itsAllexB/FilesRoot-iOS12 \
+                      itsAllexB/FilesExtensions-iOS12 itsAllexB/BatteryPlus-iOS12; do
             if gh release download --repo "$repo" --pattern '*.deb' --dir "incoming/${repo#*/}" --clobber 2>/dev/null; then
               echo "Fetched release .debs from $repo"
             else

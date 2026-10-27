@@ -1,0 +1,135 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#0091A0",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Show or hide file name extensions in the Files app.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "iOS 12's Files app drops the last extension of every file, whatever it is: `a.txt` shows as \"a\", and `patch_dyld.ios` and `patch_dyld.tvos` both show as \"patch_dyld\". FilesExtensions shows the full names. You can also hide only the extensions iOS knows, like the Finder on a Mac, or keep the iOS behaviour.\n\nOnly what you see changes. No file is renamed.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{220, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesextensions/before.png",
+              "accessibilityText": "Before: files without extensions"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesextensions/after.png",
+              "accessibilityText": "After: files with their full names"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesextensions/hide-known.png",
+              "accessibilityText": "Hide Known Extensions mode"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesextensions/settings.png",
+              "accessibilityText": "Files Extensions settings page"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Show All Extensions (default), Hide Known Extensions, or Hide All Extensions (iOS Default)\n- Every location, list and icon view, Recents, Search, the Info sheet, the Files picker other apps open, and the Dock recents popover\n- Rename edits the full name when extensions are shown, and never doubles an extension you type\n- Optionally always shows every extension in FilesRoot's System location\n- Changes apply right away, no respring needed",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > Files Extensions:\n\n- **Enabled**: turns the tweak on or off.\n- **Show Extensions**: *Show All Extensions* (default), *Hide Known Extensions* or *Hide All Extensions (iOS Default)*.\n- **Always Show in System** (on): always shows every extension in FilesRoot's System location.\n\nChanges apply right away to open Files windows.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)\n- Works alongside FilesRoot and FilesArchiver",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "15 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/FilesExtensions-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/FilesExtensions-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.0.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

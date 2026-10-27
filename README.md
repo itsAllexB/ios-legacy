@@ -25,7 +25,11 @@ Or open your package manager, go to Sources, tap Add (or Edit, then Add) and ent
 <!-- packages:start -->
 | Package | Version | What it does |
 | --- | --- | --- |
-| [DefaultBrowser (iOS 12)](https://github.com/itsAllexB/DefaultBrowser-iOS12) | 2.0.1 | Open web links in the browser you choose instead of Safari. |
+| [BatteryPlus (iOS 12)](https://github.com/itsAllexB/BatteryPlus-iOS12) | 1.1.0 | Low Power Mode, Battery Health and battery colours for iOS 12 iPads. |
+| [DefaultApps (iOS 12)](https://github.com/itsAllexB/DefaultApps-iOS12) | 3.0.0 | Choose your default browser, mail app and maps app. |
+| [FilesArchiver (iOS 12)](https://github.com/itsAllexB/FilesArchiver-iOS12) | 1.0.1 | Uncompress and Compress in the Files app, like iOS 13. |
+| [FilesExtensions (iOS 12)](https://github.com/itsAllexB/FilesExtensions-iOS12) | 1.0.0 | Show or hide file name extensions in the Files app. |
+| [FilesRoot (iOS 12)](https://github.com/itsAllexB/FilesRoot-iOS12) | 1.0.1 | Browse the whole filesystem in the Files app. Read-only by default. |
 | [SplitViewEnabler (iOS 12)](https://github.com/itsAllexB/SplitViewEnabler-iOS12) | 2.0.1 | Split View and Slide Over on iPads that only had Slide Over. |
 | [WeatherPad (iOS 12)](https://github.com/itsAllexB/WeatherPad-iOS12) | 1.2.3 | Apple's iPhone Weather app, running natively on iPad. |
 <!-- packages:end -->
@@ -73,7 +77,7 @@ The script imports the private key from `~/.config/ios-legacy/ios-legacy-private
 
 The [Publish repo](.github/workflows/publish.yml) workflow runs on every push to `main`, on manual runs, and on a `repository_dispatch` event of type `package-released`. It:
 
-1. downloads the `.deb` files from the latest GitHub release of SplitViewEnabler, DefaultBrowser and WeatherPad (if they have releases),
+1. downloads the `.deb` files from the latest GitHub release of each tweak repository (SplitViewEnabler, WeatherPad, DefaultApps, FilesArchiver, FilesRoot, FilesExtensions and BatteryPlus), if they have releases,
 2. runs `scripts/build-repo.sh` with the `GPG_PRIVATE_KEY` secret (and `GPG_PASSPHRASE`, if the key has one),
 3. deploys the result to GitHub Pages.
 

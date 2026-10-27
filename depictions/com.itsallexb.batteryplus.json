@@ -1,0 +1,173 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#2DA44E",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Low Power Mode, Battery Health and battery colours for iOS 12 iPads.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.\n\n**Low Power Mode** appears in Settings > Battery and, with CCSupport, in Control Center. It is the real iOS mode: mail fetch, iCloud Photos, dynamic wallpapers and other background work pause, and iOS turns it off again at 80%. **Battery Health** shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself. The **status bar** battery turns yellow in Low Power Mode, green while charging and red at 20% or less, and can show its percentage inside the icon.\n\n**Charge Limit** is shown as unavailable on A7 iPads such as the iPad mini 2: their charger ignores the request to pause charging, and BatteryPlus doesn't use unsafe workarounds. An optional **Unplug Reminder** tells you when the iPad has charged to the level you choose.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{231, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/battery.png",
+              "accessibilityText": "Settings > Battery with Low Power Mode, Battery Health, Charging and Status Bar"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/low-power-mode.png",
+              "accessibilityText": "Low Power Mode on, with a yellow battery"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/battery-health.png",
+              "accessibilityText": "Battery Health page"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/charging.png",
+              "accessibilityText": "Charging page with the Unplug Reminder"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/unplug-reminder.png",
+              "accessibilityText": "Unplug Reminder alert"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/status-bar-settings.png",
+              "accessibilityText": "Status Bar settings"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/status-bar-colours.png",
+              "accessibilityText": "Status bar battery colours"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{713, 220}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/control-center.png",
+              "accessibilityText": "Low Power Mode module in Control Center"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/status-bar-apps.png",
+              "accessibilityText": "Percentage inside the icon in Files and Safari"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{302, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/batteryplus/status-bar-percent.png",
+              "accessibilityText": "Percentage inside the battery icon"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Low Power Mode switch in Settings > Battery, as on iPhone\n- Low Power Mode module for Control Center (needs CCSupport)\n- Battery Health: Maximum Capacity, Cycle Count and Manufacture Date\n- Unplug Reminder at 80, 85, 90, 95 or 100%\n- Status bar battery colours: yellow in Low Power Mode, green while charging, red at 20% or less\n- Optional percentage inside the battery icon\n- No timers: nothing runs while idle",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > Battery:\n\n- **Low Power Mode**: Apple's switch, at the top of the page.\n- **Battery Health**: Maximum Capacity, Cycle Count and Manufacture Date.\n- **Charging**: Charge Limit (shown as unavailable on A7 iPads, with the reason), **Unplug Reminder** (off) and **Remind At** (80% to 100%).\n- **Status Bar**: **Battery Colours** (on) and **Percentage Inside Icon** (off; needs Battery Percentage on).\n\nControl Center: Settings > Control Center > Customize Controls > Low Power Mode (needs CCSupport).",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on other iOS 12 iPads; battery data depends on what each battery reports\n- Control Center module: install CCSupport (recommended)\n- No charge limit on A7 iPads, and Low Power Mode doesn't slow the CPU there",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.1.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "24 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/BatteryPlus-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/BatteryPlus-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.1.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Low Power Mode in Settings and Control Center, status bar battery colours and the percentage inside the icon, alongside Battery Health and the Unplug Reminder.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#AF52DE",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Uncompress and Compress in the Files app, like iOS 13.",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "On iOS 12 the Files app can only peek into a zip file. It can't extract it, and it can't make archives at all.\n\nFilesArchiver adds **Uncompress** and **Compress** to the menu you get when you touch and hold an item, and **Compress** to the top bar when you select several items. It opens zip (including password-protected zips), 7z, rar, tar, tar.gz and many more, and creates zip, tar.gz or 7z archives.\n\nArchives are treated as untrusted: everything is extracted into a private folder and checked first, `../` paths and unsafe links are dropped, and nothing is ever written over an existing file.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{293, 220}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesarchiver/menu.png",
+              "accessibilityText": "Uncompress and Compress in the Files menu"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesarchiver/compress.png",
+              "accessibilityText": "Compress in the selection bar"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesarchiver/progress.png",
+              "accessibilityText": "Uncompressing progress with Cancel"
+            },
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesarchiver/result.png",
+              "accessibilityText": "Extracted folders next to their archives"
+            }
+          ]
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{295, 300}",
+          "screenshots": [
+            {
+              "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/filesarchiver/settings.png",
+              "accessibilityText": "Files Archiver settings page"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Uncompress zip (with a password prompt for password-protected zips), 7z, rar and rar5, tar, tar.gz, tar.bz2, tar.xz, tar.zst, gz, bz2, xz, zst, lz4, cpio, xar, iso, cab, lha, deb, ipa, cbz/cbr/cb7\n- Compress to zip (default), tar.gz or 7z: one file, several files or folders\n- Names like iOS 13: Name.zip, Archive.zip, and \" 2\" instead of overwriting anything\n- Progress with Cancel; the work runs in the background and memory use stays flat, even for very large archives\n- Keeps at least 500 MB free on the device; a job that can't finish stops, cleans up and says why\n- Settings: format, extract into a folder, delete the archive after extracting (to Recently Deleted), skip Mac metadata",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Settings > Files Archiver:\n\n- **Enabled**: turns the tweak on or off.\n- **Format**: what Compress creates: *Zip* (default, opens almost everywhere), *Tar + Gzip* (keeps file permissions) or *7-Zip* (smallest, slower).\n- **Extract into a Folder** (on): an archive with several items is extracted into a folder named after it.\n- **Delete Archive After Extracting** (off): moves the archive to Recently Deleted after a successful extraction.\n- **Skip Mac Metadata** (on): leaves out `__MACOSX` folders, `._` files and `.DS_Store`.\n\nChanges apply right away.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Compatibility"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)\n- Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)\n- Needs libarchive13 from Procursus (installed automatically)\n- Password-protected 7z and rar archives and multi-volume archives are not supported",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "itsAllexB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Size",
+          "text": "40 KB"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "GPL-3.0"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code",
+          "action": "https://github.com/itsAllexB/FilesArchiver-iOS12",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report a Problem",
+          "action": "https://github.com/itsAllexB/FilesArchiver-iOS12/issues",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionLabelView",
+          "text": "Unofficial. Not affiliated with or endorsed by Apple.",
+          "fontSize": 12,
+          "alignment": 1,
+          "textColor": "#8E8E93"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.0.1",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public release.\n- Safety and robustness fixes from a full review: memory use stays flat for huge archives and archives with tens of thousands of files.\n- Links: only relative links that stay inside their own extracted item are kept; nothing is ever written through a link.\n- Free space: keeps at least 500 MB free; a job that can't finish stops and removes what it wrote.\n- Names over 255 bytes and paths nested too deeply are skipped and counted instead of failing the job.\n- Refused at once, with a message, where new items aren't accepted (the top level of On My iPad, read-only locations).\n- Clearer progress and messages: many small files, several jobs at once, archives with only hidden items, jobs stopped by iOS in the background.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.0.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First version (not published).",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 Package: com.itsallexb.batteryplus
 Name: BatteryPlus (iOS 12)
-Version: 1.1.0
+Version: 1.1.1
 Architecture: iphoneos-arm
-Description: Battery features of current iOS for iOS 12 iPads. Low Power Mode in Settings > Battery and in Control Center (with CCSupport), battery colours in the status bar (yellow in Low Power Mode, green while charging, red at 20%) and an optional percentage inside the battery icon. Battery Health with Maximum Capacity, Cycle Count and Manufacture Date from the battery's gas gauge, and an optional Unplug Reminder.
+Description: Battery features of modern iOS for iOS 12 iPads. Low Power Mode in Settings > Battery and in Control Center (with CCSupport), battery colours in the status bar like modern iOS (yellow in Low Power Mode, green while charging, red at 20%), and the battery percentage inside the battery icon, also like modern iOS (optional). Battery Health with Maximum Capacity, Cycle Count and Manufacture Date from the battery's gas gauge, and an optional Unplug Reminder.
 Maintainer: itsAllexB
 Author: itsAllexB
 Section: Tweaks
@@ -12,55 +12,32 @@ Homepage: https://github.com/itsAllexB/BatteryPlus-iOS12
 Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.batteryplus.html
 SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.batteryplus.json
 Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.batteryplus.png
-Filename: debs/com.itsallexb.batteryplus_1.1.0_iphoneos-arm.deb
-Size: 24854
-MD5sum: 43fe8c613a67e8ac953c68686d531967
-SHA1: 7dc18277951d5186a2d1b0b78d95106e3f4ddf8c
-SHA256: 001ab49434e961e80b83f4888cd001b9a94a383408accefc188f4b2c5485b878
+Filename: debs/com.itsallexb.batteryplus_1.1.1_iphoneos-arm.deb
+Size: 25942
+MD5sum: 6ad898e0c320146c99c0ece3975f3c7a
+SHA1: 6b30b930bd092b9dcc6db46ef613586fa081696e
+SHA256: 4be13f0aace99be412c14b32f1d89de96dfa4896e530e5a6e8ac0b1a7f3ddb17
 Recommends: com.opa334.ccsupport
 
 Package: com.itsallexb.defaultapps
 Name: DefaultApps (iOS 12)
-Version: 3.0.1
+Version: 3.1.0
 Architecture: iphoneos-arm
-Description: Choose your default browser, mail app and maps app on iOS 12, like iOS 14. Web links open in Firefox, Chrome, Brave, DuckDuckGo and more; mailto: links open in Gmail, Outlook, Spark, Yahoo Mail, Proton Mail and more; Apple Maps links open in Google Maps, Waze and more. Only installed apps are offered. Settings > Default Apps. Replaces DefaultBrowser.
+Description: Choose your default browser, mail app and maps app on iOS 12, like iOS 14. Web links open in Firefox, Chrome, Brave, DuckDuckGo and more; mailto: links open in Gmail, Outlook, Spark, Yahoo Mail, Proton Mail and more; Apple Maps links open in Google Maps, Waze and more. Only installed apps are offered. Settings > Default Apps.
 Maintainer: itsAllexB
 Author: itsAllexB
 Section: Tweaks
 Depends: mobilesubstrate, firmware (>= 12.0), firmware (<< 13.0), preferenceloader
-Conflicts: com.itsallexb.firefoxdefault
-Replaces: com.itsallexb.defaultbrowser (<< 2.0.2), com.itsallexb.firefoxdefault
-Provides: com.itsallexb.firefoxdefault
-Breaks: com.itsallexb.defaultbrowser (<< 2.0.2)
 Installed-Size: 224
 Homepage: https://github.com/itsAllexB/DefaultApps-iOS12
 Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultapps.html
 SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultapps.json
 Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultapps.png
-Filename: debs/com.itsallexb.defaultapps_3.0.1_iphoneos-arm.deb
-Size: 31826
-MD5sum: 716ae09b2930fb9d8c0ca0421706eb52
-SHA1: bd0b837083f65f44cb074f2c9dbc0c1c44524337
-SHA256: 51f1f49f6b0829cc3f6f10e657bb62850596b1519d622b345a47fba99d25868f
-
-Package: com.itsallexb.defaultbrowser
-Name: DefaultBrowser (iOS 12)
-Version: 2.0.2
-Architecture: iphoneos-arm
-Description: DefaultBrowser is now DefaultApps (iOS 12), which also lets you choose the mail and maps apps. This empty package installs DefaultApps, which keeps your browser choice. You can remove it afterwards.
-Maintainer: itsAllexB
-Author: itsAllexB
-Section: Tweaks
-Depends: com.itsallexb.defaultapps (>= 3.0.1), firmware (>= 12.0), firmware (<< 13.0)
-Homepage: https://github.com/itsAllexB/DefaultApps-iOS12
-Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.html
-SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.defaultbrowser.json
-Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.defaultbrowser.png
-Filename: debs/com.itsallexb.defaultbrowser_2.0.2_iphoneos-arm.deb
-Size: 848
-MD5sum: 4ec18908e202cb8526c191d84a887793
-SHA1: 1210c1a908e2eaa8113e7b4fd86e3e109232ccad
-SHA256: 5f187a2b8c037e01888793e0e3c185673dd6fa2f2db1d1ba22dd93ace860a7ce
+Filename: debs/com.itsallexb.defaultapps_3.1.0_iphoneos-arm.deb
+Size: 31478
+MD5sum: 2338c861216867c4e249d37c9d62589e
+SHA1: e56e3d755ceca12c30626329f30c768223a04a0e
+SHA256: 7282b854e33f6b10f90f8f8c2d9bdfc6a72b13a03933f9c56d684d2ebfa2cbaf
 
 Package: com.itsallexb.filesarchiver
 Name: FilesArchiver (iOS 12)

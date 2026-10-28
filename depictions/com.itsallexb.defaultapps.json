@@ -14,7 +14,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nDefaultApps is the successor of DefaultBrowser. Installing it replaces DefaultBrowser and keeps your browser choice; Mail and Maps start on Default (Apple), so nothing else changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
+          "markdown": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nBrowser, Mail and Maps start on Safari, Mail and Maps, so nothing changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
           "useSpacing": true
         },
         {
@@ -43,7 +43,7 @@
           "screenshots": [
             {
               "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/maps-picker.png",
-              "accessibilityText": "Maps picker with Default (Apple) and Google Maps"
+              "accessibilityText": "Maps picker with Maps and Google Maps, each with its icon"
             },
             {
               "url": "https://itsallexb.github.io/ios-legacy/depictions/screenshots/defaultapps/mailto-fields.png",
@@ -57,7 +57,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera\n- Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in\n- Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route\n- Email addresses tapped in Notes, Messages and other text open in the chosen mail app\n- Only installed apps are offered, plus Default (Apple)\n- Replaces DefaultBrowser and keeps its settings",
+          "markdown": "- Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera\n- Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in\n- Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route\n- Email addresses tapped in Notes, Messages and other text open in the chosen mail app\n- Each list shows Safari, Mail or Maps and the supported apps that are installed, with their icons",
           "useSpacing": true
         },
         {
@@ -66,7 +66,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Only installed apps are listed; the note under each list names the other supported apps.",
+          "markdown": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Each list shows the Apple app and the supported apps that are installed, with their icons; the note under each list names the other supported apps.",
           "useSpacing": true
         },
         {
@@ -84,7 +84,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "3.0.1"
+          "text": "3.1.0"
         },
         {
           "class": "DepictionTableTextView",
@@ -132,12 +132,22 @@
       "views": [
         {
           "class": "DepictionSubheaderView",
+          "title": "Version 3.1.0",
+          "useBoldText": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- The lists show Safari, Mail and Maps by name instead of \"Default (Apple)\".\n- Each app in the lists shows its icon.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "Version 3.0.1",
           "useBoldText": true
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- First release as DefaultApps (successor of DefaultBrowser 2.0.1).\n- Choose the mail app and the maps app, as well as the browser.\n- Replaces DefaultBrowser and keeps your browser choice. DefaultBrowser users get it with a normal upgrade.",
+          "markdown": "- First public release: choose the browser, the mail app and the maps app.",
           "useSpacing": true
         },
         {

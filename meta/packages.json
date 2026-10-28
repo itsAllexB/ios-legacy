@@ -35,28 +35,6 @@
         {"version": "2.0.0", "changes": ["First public release.", "Settings page with Enabled switch, Mode picker and Respring button.", "Slide Over on top of Split View."]}
       ]
     },
-    "com.itsallexb.defaultbrowser": {
-      "short": "defaultbrowser",
-      "github": "itsAllexB/DefaultApps-iOS12",
-      "transitional": true,
-      "tint": "#FF9500",
-      "tagline": "DefaultBrowser is now DefaultApps.",
-      "description": "DefaultBrowser has been replaced by **DefaultApps (iOS 12)**, which also lets you choose the mail app and the maps app.\n\nThis version is an empty package: upgrading to it installs DefaultApps, which keeps the browser you picked. After that you can remove DefaultBrowser; DefaultApps stays installed.",
-      "features": [
-        "Installs DefaultApps (iOS 12) and moves your browser choice over",
-        "Contains no files of its own; safe to remove after the upgrade"
-      ],
-      "compatibility": [
-        "iOS 12.x, like DefaultApps"
-      ],
-      "settings": "None. The settings are in Settings > Default Apps.",
-      "screenshots": [],
-      "changelog": [
-        {"version": "2.0.2", "changes": ["DefaultBrowser is now DefaultApps. This empty package installs DefaultApps, which keeps your browser choice. You can remove it afterwards."]},
-        {"version": "2.0.1", "changes": ["Renamed to include \"(iOS 12)\" in the name.", "Now installs only on iOS 12.x."]},
-        {"version": "2.0.0", "changes": ["First public release.", "Choose between several browsers (successor of FirefoxDefault)."]}
-      ]
-    },
     "com.itsallexb.weatherpad": {
       "short": "weatherpad",
       "github": "itsAllexB/WeatherPad-iOS12",
@@ -189,14 +167,14 @@
       "github": "itsAllexB/BatteryPlus-iOS12",
       "tint": "#2DA44E",
       "tagline": "Low Power Mode, Battery Health and battery colours for iOS 12 iPads.",
-      "description": "On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.\n\n**Low Power Mode** appears in Settings > Battery and, with CCSupport, in Control Center. It is the real iOS mode: mail fetch, iCloud Photos, dynamic wallpapers and other background work pause, and iOS turns it off again at 80%. **Battery Health** shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself. The **status bar** battery turns yellow in Low Power Mode, green while charging and red at 20% or less, and can show its percentage inside the icon.\n\n**Charge Limit** is shown as unavailable on A7 iPads such as the iPad mini 2: their charger ignores the request to pause charging, and BatteryPlus doesn't use unsafe workarounds. An optional **Unplug Reminder** tells you when the iPad has charged to the level you choose.",
+      "description": "On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.\n\n**Low Power Mode** appears in Settings > Battery and, with CCSupport, in Control Center. It is the real iOS mode: mail fetch, iCloud Photos, dynamic wallpapers and other background work pause, and iOS turns it off again at 80%. **Battery Health** shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself. **Battery colours** like modern iOS: the status bar battery turns yellow in Low Power Mode, green while charging and red at 20% or less. The **percentage can go inside the battery icon**, also like modern iOS, and Low Power Mode no longer forces the percentage on.\n\n**Charge Limit** is shown as unavailable on A7 iPads such as the iPad mini 2: their charger ignores the request to pause charging, and BatteryPlus doesn't use unsafe workarounds. An optional **Unplug Reminder** tells you when the iPad has charged to the level you choose.",
       "features": [
         "Low Power Mode switch in Settings > Battery, as on iPhone",
         "Low Power Mode module for Control Center (needs CCSupport)",
         "Battery Health: Maximum Capacity, Cycle Count and Manufacture Date",
         "Unplug Reminder at 80, 85, 90, 95 or 100%",
-        "Status bar battery colours: yellow in Low Power Mode, green while charging, red at 20% or less",
-        "Optional percentage inside the battery icon",
+        "Battery colours like modern iOS: yellow in Low Power Mode, green while charging, red at 20% or less",
+        "Percentage inside the battery icon, like modern iOS (optional, also in Control Center)",
         "No timers: nothing runs while idle"
       ],
       "compatibility": [
@@ -205,7 +183,7 @@
         "Control Center module: install CCSupport (recommended)",
         "No charge limit on A7 iPads, and Low Power Mode doesn't slow the CPU there"
       ],
-      "settings": "Settings > Battery:\n\n- **Low Power Mode**: Apple's switch, at the top of the page.\n- **Battery Health**: Maximum Capacity, Cycle Count and Manufacture Date.\n- **Charging**: Charge Limit (shown as unavailable on A7 iPads, with the reason), **Unplug Reminder** (off) and **Remind At** (80% to 100%).\n- **Status Bar**: **Battery Colours** (on) and **Percentage Inside Icon** (off; needs Battery Percentage on).\n\nControl Center: Settings > Control Center > Customize Controls > Low Power Mode (needs CCSupport).",
+      "settings": "Settings > Battery:\n\n- **Low Power Mode**: Apple's switch, at the top of the page.\n- **Battery Health**: Maximum Capacity, Cycle Count and Manufacture Date.\n- **Charging**: Charge Limit (shown as unavailable on A7 iPads, with the reason), **Unplug Reminder** (off) and **Remind At** (80% to 100%).\n- **Status Bar**: **Battery Colours** (on) and **Percentage Inside Icon** (off; works with Battery Percentage on or off).\n\nControl Center: Settings > Control Center > Customize Controls > Low Power Mode (needs CCSupport).",
       "screenshots": [
         {"file": "battery.png", "alt": "Settings > Battery with Low Power Mode, Battery Health, Charging and Status Bar"},
         {"file": "low-power-mode.png", "alt": "Low Power Mode on, with a yellow battery"},
@@ -214,11 +192,12 @@
         {"file": "unplug-reminder.png", "alt": "Unplug Reminder alert"},
         {"file": "status-bar-settings.png", "alt": "Status Bar settings"},
         {"file": "control-center.png", "alt": "Low Power Mode module in Control Center"},
-        {"file": "status-bar-colours.png", "alt": "Status bar battery colours"},
+        {"file": "status-bar-colours.png", "alt": "Battery colours compared with iOS 12"},
         {"file": "status-bar-percent.png", "alt": "Percentage inside the battery icon"},
         {"file": "status-bar-apps.png", "alt": "Percentage inside the icon in Files and Safari"}
       ],
       "changelog": [
+        {"version": "1.1.1", "changes": ["Percentage Inside Icon now also works in Control Center. Its battery no longer switches back to the iOS 12 look while Control Center opens.", "Percentage Inside Icon works with Battery Percentage on or off.", "Low Power Mode no longer forces the battery percentage on; it follows the Battery Percentage switch.", "Descriptions say \"modern iOS\" instead of \"current iOS\"."]},
         {"version": "1.1.0", "changes": ["First public release.", "Low Power Mode in Settings and Control Center, status bar battery colours and the percentage inside the icon, alongside Battery Health and the Unplug Reminder."]}
       ]
     },
@@ -227,14 +206,13 @@
       "github": "itsAllexB/DefaultApps-iOS12",
       "tint": "#5856D6",
       "tagline": "Choose your default browser, mail app and maps app.",
-      "description": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nDefaultApps is the successor of DefaultBrowser. Installing it replaces DefaultBrowser and keeps your browser choice; Mail and Maps start on Default (Apple), so nothing else changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
+      "description": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nBrowser, Mail and Maps start on Safari, Mail and Maps, so nothing changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
       "features": [
         "Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera",
         "Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in",
         "Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route",
         "Email addresses tapped in Notes, Messages and other text open in the chosen mail app",
-        "Only installed apps are offered, plus Default (Apple)",
-        "Replaces DefaultBrowser and keeps its settings"
+        "Each list shows Safari, Mail or Maps and the supported apps that are installed, with their icons"
       ],
       "compatibility": [
         "Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)",
@@ -242,16 +220,17 @@
         "The apps must be installed and still run on iOS 12",
         "Apps that show Apple's own mail sheet (\"Share by Mail\") still use Apple Mail, as on iOS 14"
       ],
-      "settings": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Only installed apps are listed; the note under each list names the other supported apps.",
+      "settings": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Each list shows the Apple app and the supported apps that are installed, with their icons; the note under each list names the other supported apps.",
       "screenshots": [
         {"file": "settings.png", "alt": "Default Apps settings page"},
-        {"file": "maps-picker.png", "alt": "Maps picker with Default (Apple) and Google Maps"},
+        {"file": "maps-picker.png", "alt": "Maps picker with Maps and Google Maps, each with its icon"},
         {"file": "google-maps-place.jpg", "alt": "An Apple Maps link opened in Google Maps"},
         {"file": "google-maps-route.png", "alt": "An Apple Maps route opened in Google Maps"},
         {"file": "mailto-fields.png", "alt": "The fields a mail app receives from a mailto link"}
       ],
       "changelog": [
-        {"version": "3.0.1", "changes": ["First release as DefaultApps (successor of DefaultBrowser 2.0.1).", "Choose the mail app and the maps app, as well as the browser.", "Replaces DefaultBrowser and keeps your browser choice. DefaultBrowser users get it with a normal upgrade."]},
+        {"version": "3.1.0", "changes": ["The lists show Safari, Mail and Maps by name instead of \"Default (Apple)\".", "Each app in the lists shows its icon."]},
+        {"version": "3.0.1", "changes": ["First public release: choose the browser, the mail app and the maps app."]},
         {"version": "3.0.0", "changes": ["Test version (not published)."]}
       ]
     }

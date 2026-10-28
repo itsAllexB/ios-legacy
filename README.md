@@ -25,8 +25,8 @@ Or open your package manager, go to Sources, tap Add (or Edit, then Add) and ent
 <!-- packages:start -->
 | Package | Version | What it does |
 | --- | --- | --- |
-| [BatteryPlus (iOS 12)](https://github.com/itsAllexB/BatteryPlus-iOS12) | 1.1.0 | Low Power Mode, Battery Health and battery colours for iOS 12 iPads. |
-| [DefaultApps (iOS 12)](https://github.com/itsAllexB/DefaultApps-iOS12) | 3.0.1 | Choose your default browser, mail app and maps app. |
+| [BatteryPlus (iOS 12)](https://github.com/itsAllexB/BatteryPlus-iOS12) | 1.1.1 | Low Power Mode, Battery Health and battery colours for iOS 12 iPads. |
+| [DefaultApps (iOS 12)](https://github.com/itsAllexB/DefaultApps-iOS12) | 3.1.0 | Choose your default browser, mail app and maps app. |
 | [FilesArchiver (iOS 12)](https://github.com/itsAllexB/FilesArchiver-iOS12) | 1.0.1 | Uncompress and Compress in the Files app, like iOS 13. |
 | [FilesExtensions (iOS 12)](https://github.com/itsAllexB/FilesExtensions-iOS12) | 1.0.1 | Show or hide file name extensions in the Files app. |
 | [FilesRoot (iOS 12)](https://github.com/itsAllexB/FilesRoot-iOS12) | 1.0.2 | Browse the whole filesystem in the Files app. Read-only by default. |

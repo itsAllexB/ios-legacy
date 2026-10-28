@@ -1,22 +1,22 @@
 Package: com.itsallexb.batteryplus
 Name: BatteryPlus (iOS 12)
-Version: 1.1.1
+Version: 1.2.0
 Architecture: iphoneos-arm
-Description: Battery features of modern iOS for iOS 12 iPads. Low Power Mode in Settings > Battery and in Control Center (with CCSupport), battery colours in the status bar like modern iOS (yellow in Low Power Mode, green while charging, red at 20%), and the battery percentage inside the battery icon, also like modern iOS (optional). Battery Health with Maximum Capacity, Cycle Count and Manufacture Date from the battery's gas gauge, and an optional Unplug Reminder.
+Description: Battery features of modern iOS for iOS 12 iPads. Low Power Mode in Settings > Battery and in Control Center (with CCSupport), and Automatic Low Power Mode: on when the battery drops to 5, 10, 15 or 20%, off again at 80%. Battery Percentage next to the battery icon or inside it, like modern iOS. Battery Health with Maximum Capacity, Cycle Count and Manufacture Date from the battery's gas gauge, and an optional Unplug Reminder.
 Maintainer: itsAllexB
 Author: itsAllexB
 Section: Tweaks
 Depends: mobilesubstrate, preferenceloader, firmware (>= 12.0), firmware (<< 13.0)
-Installed-Size: 256
+Installed-Size: 276
 Homepage: https://github.com/itsAllexB/BatteryPlus-iOS12
 Depiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.batteryplus.html
 SileoDepiction: https://itsallexb.github.io/ios-legacy/depictions/com.itsallexb.batteryplus.json
 Icon: https://itsallexb.github.io/ios-legacy/icons/com.itsallexb.batteryplus.png
-Filename: debs/com.itsallexb.batteryplus_1.1.1_iphoneos-arm.deb
-Size: 25942
-MD5sum: 6ad898e0c320146c99c0ece3975f3c7a
-SHA1: 6b30b930bd092b9dcc6db46ef613586fa081696e
-SHA256: 4be13f0aace99be412c14b32f1d89de96dfa4896e530e5a6e8ac0b1a7f3ddb17
+Filename: debs/com.itsallexb.batteryplus_1.2.0_iphoneos-arm.deb
+Size: 31696
+MD5sum: 68484141438e066663a6811e27f3c4ea
+SHA1: aeeecb5e6ff6e87dfb0c91ecf659e2c0ac18704a
+SHA256: ba82555e504465eaa7d116f74cd9330e6bb5ecc0da30a8a716b9099dd15b67ef
 Recommends: com.opa334.ccsupport
 
 Package: com.itsallexb.defaultapps

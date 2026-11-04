@@ -30,7 +30,7 @@ Or open your package manager, go to Sources, tap Add (or Edit, then Add) and ent
 | [FilesArchiver (iOS 12)](https://github.com/itsAllexB/FilesArchiver-iOS12) | 1.0.1 | Uncompress and Compress in the Files app, like iOS 13. |
 | [FilesExtensions (iOS 12)](https://github.com/itsAllexB/FilesExtensions-iOS12) | 1.0.1 | Show or hide file name extensions in the Files app. |
 | [FilesRoot (iOS 12)](https://github.com/itsAllexB/FilesRoot-iOS12) | 1.0.2 | Browse the whole filesystem in the Files app. Read-only by default. |
-| [SafariScale (iOS 6)](https://github.com/itsAllexB/SafariScale-iOS6) | 1.0.0 | Smaller web pages in Safari on iOS 6, like zooming out in a desktop browser. |
+| [SafariScale (iOS 6)](https://github.com/itsAllexB/SafariScale-iOS6) | 1.1.0 | Smaller web pages in Safari on iOS 6, like zooming out in a desktop browser. |
 | [SplitViewEnabler (iOS 12)](https://github.com/itsAllexB/SplitViewEnabler-iOS12) | 2.0.1 | Split View and Slide Over on iPads that only had Slide Over. |
 | [WeatherPad (iOS 12)](https://github.com/itsAllexB/WeatherPad-iOS12) | 1.2.3 | Apple's iPhone Weather app, running natively on iPad. |
 <!-- packages:end -->

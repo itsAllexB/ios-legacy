@@ -2,7 +2,7 @@
 
 <img src="CydiaIcon.png" alt="" width="96" align="right">
 
-A small package source (APT repo) for jailbroken iPads and iPhones on iOS 12, with tweaks by itsAllexB. It works with Sileo, Zebra and Cydia.
+A small package source (APT repo) for jailbroken iPads and iPhones on iOS 12 and iOS 6, with tweaks by itsAllexB. It works with Sileo, Zebra and Cydia (including Cydia on iOS 6).
 
 Source URL:
 
@@ -30,11 +30,12 @@ Or open your package manager, go to Sources, tap Add (or Edit, then Add) and ent
 | [FilesArchiver (iOS 12)](https://github.com/itsAllexB/FilesArchiver-iOS12) | 1.0.1 | Uncompress and Compress in the Files app, like iOS 13. |
 | [FilesExtensions (iOS 12)](https://github.com/itsAllexB/FilesExtensions-iOS12) | 1.0.1 | Show or hide file name extensions in the Files app. |
 | [FilesRoot (iOS 12)](https://github.com/itsAllexB/FilesRoot-iOS12) | 1.0.2 | Browse the whole filesystem in the Files app. Read-only by default. |
+| [SafariScale (iOS 6)](https://github.com/itsAllexB/SafariScale-iOS6) | 1.0.0 | Smaller web pages in Safari on iOS 6, like zooming out in a desktop browser. |
 | [SplitViewEnabler (iOS 12)](https://github.com/itsAllexB/SplitViewEnabler-iOS12) | 2.0.1 | Split View and Slide Over on iPads that only had Slide Over. |
 | [WeatherPad (iOS 12)](https://github.com/itsAllexB/WeatherPad-iOS12) | 1.2.3 | Apple's iPhone Weather app, running natively on iPad. |
 <!-- packages:end -->
 
-All packages are tested on an iPad mini 2 with iOS 12.5.8 (checkra1n + odysseyra1n / libhooker) and should work on iOS 12.x. Each package page in your package manager has screenshots, settings and compatibility details.
+The iOS 12 packages are tested on an iPad mini 2 with iOS 12.5.8 (checkra1n + odysseyra1n / libhooker) and should work on iOS 12.x. SafariScale is tested on an iPhone 4S with iOS 6.1.3 (Cydia Substrate) and installs on iOS 6.x only. Every package only installs on the iOS version it was made for. Each package page in your package manager has screenshots, settings and compatibility details.
 
 These are unofficial tweaks. They are not affiliated with or endorsed by Apple.
 

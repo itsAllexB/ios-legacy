@@ -35,7 +35,8 @@ jobs:
           mkdir -p incoming
           for repo in itsAllexB/SplitViewEnabler-iOS12 itsAllexB/WeatherPad-iOS12 \
                       itsAllexB/DefaultApps-iOS12 itsAllexB/FilesArchiver-iOS12 itsAllexB/FilesRoot-iOS12 \
-                      itsAllexB/FilesExtensions-iOS12 itsAllexB/BatteryPlus-iOS12; do
+                      itsAllexB/FilesExtensions-iOS12 itsAllexB/BatteryPlus-iOS12 \
+                      itsAllexB/SafariScale-iOS6; do
             if gh release download --repo "$repo" --pattern '*.deb' --dir "incoming/${repo#*/}" --clobber 2>/dev/null; then
               echo "Fetched release .debs from $repo"
             else

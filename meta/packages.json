@@ -1,7 +1,7 @@
 {
   "repo": {
     "name": "iOS Legacy",
-    "description": "Tweaks for older iPads and iPhones on iOS 12, by itsAllexB.",
+    "description": "Tweaks for older iPads and iPhones on iOS 12 and iOS 6, by itsAllexB.",
     "maintainer": "itsAllexB",
     "github": "itsAllexB/ios-legacy"
   },
@@ -230,6 +230,40 @@
         {"version": "3.1.0", "changes": ["The lists show Safari, Mail and Maps by name instead of \"Default (Apple)\".", "Each app in the lists shows its icon."]},
         {"version": "3.0.1", "changes": ["First public release: choose the browser, the mail app and the maps app."]},
         {"version": "3.0.0", "changes": ["Test version (not published)."]}
+      ]
+    },
+    "com.itsallexb.safariscale": {
+      "short": "safariscale",
+      "github": "itsAllexB/SafariScale-iOS6",
+      "tint": "#1A84F0",
+      "tagline": "Smaller web pages in Safari on iOS 6, like zooming out in a desktop browser.",
+      "description": "Modern websites are made for phones much bigger than an iPhone 4S. On a 3.5-inch screen they look cramped: big text, huge buttons and very little on screen at once. SafariScale shows pages at 80% of their size by default, or anywhere from 50% to 100%, so more fits on the screen.\n\nThe page gets a real, wider layout and is shown smaller, so nothing is cut off or broken: links, forms, menus, pinch zoom and rotation all keep working. Works with **Web Port** (lululab's modern WebKit for iOS 6) as well as Safari's own engine.",
+      "features": [
+        "Page Size: 50%, 60%, 70%, 80% (default), 90% or 100% (iOS default)",
+        "Only pages made for phones change; desktop sites and fixed-width pages are left alone",
+        "A real layout: at 80% a page is laid out 400 px wide instead of 320 px, so the site's own CSS uses the room",
+        "Text stays in proportion: iOS text autosizing doesn't blow the text back up",
+        "Open pages update in place when you change the size; nothing reloads",
+        "Works with Web Port, including its own zoom controls, and with Safari's own engine"
+      ],
+      "compatibility": [
+        "Tested on iPhone 4S, iOS 6.1.3 (Cydia Substrate), with Web Port 1.0.0 and with Safari's own engine",
+        "iOS 6.x only (armv7)",
+        "Only Safari changes; other apps and home-screen web apps keep the normal size"
+      ],
+      "settings": "Settings > Safari Scale:\n\n- **Enabled**: turns the tweak on or off.\n- **Page Size**: 50% to 100% in steps of 10%. 80% is the default.\n\nPages that are already open update when you go back to Safari.",
+      "screenshots": [
+        {"file": "google-100.png", "alt": "Google at 100% (iOS default): the top bar does not fit"},
+        {"file": "google-080.png", "alt": "Google at 80%: everything fits"},
+        {"file": "hn-100.png", "alt": "Hacker News at 100%: about 3 stories on screen"},
+        {"file": "hn-080.png", "alt": "Hacker News at 80%: about 6 stories on screen"},
+        {"file": "youtube-080.png", "alt": "YouTube search results at 80%"},
+        {"file": "wikipedia-080.png", "alt": "Wikipedia article at 80%"},
+        {"file": "settings.png", "alt": "Safari Scale settings page"},
+        {"file": "page-size.png", "alt": "Page Size choices, 50% to 100%"}
+      ],
+      "changelog": [
+        {"version": "1.0.0", "changes": ["First public release."]}
       ]
     }
   }

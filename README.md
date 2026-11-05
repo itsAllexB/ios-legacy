@@ -35,7 +35,7 @@ Or open your package manager, go to Sources, tap Add (or Edit, then Add) and ent
 | [WeatherPad (iOS 12)](https://github.com/itsAllexB/WeatherPad-iOS12) | 1.2.3 | Apple's iPhone Weather app, running natively on iPad. |
 <!-- packages:end -->
 
-The iOS 12 packages are tested on an iPad mini 2 with iOS 12.5.8 (checkra1n + odysseyra1n / libhooker) and should work on iOS 12.x. SafariScale is tested on an iPhone 4S with iOS 6.1.3 (Cydia Substrate) and installs on iOS 6.x only. Every package only installs on the iOS version it was made for. Each package page in your package manager has screenshots, settings and compatibility details.
+The iOS 12 packages are tested on an iPad mini 2 with iOS 12.5.8 (checkra1n + odysseyra1n / libhooker) and should work on iOS 12.x. SafariScale and OldSend are tested on an iPhone 4S with iOS 6.1.3 (Cydia Substrate) and install on iOS 6.x only. Every package only installs on the iOS version it was made for. Each package page in your package manager has screenshots, settings and compatibility details.
 
 These are unofficial tweaks. They are not affiliated with or endorsed by Apple.
 

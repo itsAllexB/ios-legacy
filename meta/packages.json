@@ -272,6 +272,40 @@
         {"version": "1.1.0", "changes": ["Page Size now goes down to 30% (30% and 40% added)."]},
         {"version": "1.0.0", "changes": ["First public release."]}
       ]
+    },
+    "com.itsallexb.oldsend": {
+      "short": "oldsend",
+      "github": "itsAllexB/OldSend",
+      "tint": "#2B8A90",
+      "tagline": "Send files, photos, links and text between an iOS 6 iPhone and any device running LocalSend.",
+      "description": "OldSend 2.0 is my version of **OldSend by lihaoyun6**, the native LocalSend client for old iPhones, made for iOS 6 on Retina iPhones. It talks to the LocalSend app on today's phones and computers (Windows, macOS, Linux, Android, iOS) over your Wi-Fi: no cables, no cloud.\n\nShare from any app with the OldSend button in the share sheet, watch every file on a live transfer screen, and turn on **Run in Background** to stay discoverable with the app closed.",
+      "features": [
+        "Works with LocalSend everywhere (protocol v2.2 over TLS 1.2), including sending to LocalSend on desktop",
+        "Live transfer screen: per-file progress and state, overall progress, files, size, speed and time left, with Cancel",
+        "OldSend in the share sheet of every app (Safari, Photos and more), and in \"Open in…\" for any file",
+        "Run in Background (off by default): discoverable and able to receive with the app closed; a notification opens the Accept / Decline prompt",
+        "Send photos, videos, text, the clipboard, links and any file, with a built-in file browser",
+        "Save to Photos: received photos and videos go straight to Photos, or stay in History",
+        "Network info on the Receive page, Quick Save, English and Simplified Chinese",
+        "Sharp on Retina screens, with a new app icon"
+      ],
+      "compatibility": [
+        "Tested on iPhone 4S, iOS 6.1.3 (Cydia Substrate), with LocalSend 1.17 on Windows",
+        "iOS 6.x only (armv7)",
+        "Replaces lihaoyun6's OldSend (com.lihaoyun6.oldsend) if it is installed; settings and the device's LocalSend identity carry over"
+      ],
+      "settings": "In OldSend's own Settings tab:\n\n- **Nickname**: the name other LocalSend devices see.\n- **Quick Save**: accept incoming files without asking.\n- **Save to Photos**: move received photos and videos into Photos (default on).\n- **Run in Background**: stay discoverable and able to receive with OldSend closed (default off). When the phone sleeps, iOS pauses it, so it doesn't use battery.",
+      "screenshots": [
+        {"file": "receive.png", "alt": "Receive page with the network info card"},
+        {"file": "send.png", "alt": "Send page with a nearby LocalSend device"},
+        {"file": "transfer.png", "alt": "Live transfer screen while receiving three files"},
+        {"file": "share-sheet.png", "alt": "OldSend in Safari's share sheet"},
+        {"file": "settings.png", "alt": "Settings: Quick Save, Save to Photos and Run in Background"},
+        {"file": "about.png", "alt": "Credits to lihaoyun6 and the LocalSend team"}
+      ],
+      "changelog": [
+        {"version": "2.0", "changes": ["First release of OldSend 2.0, based on OldSend 1.0.1 by lihaoyun6.", "Sends to LocalSend on desktop again; live transfer screen; share sheet and \"Open in…\"; Run in Background; Save to Photos; network info; Retina artwork and a new icon; many robustness fixes."]}
+      ]
     }
   }
 }

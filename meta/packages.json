@@ -296,7 +296,7 @@
       ],
       "settings": "In OldSend's own Settings tab:\n\n- **Nickname**: the name other LocalSend devices see.\n- **Quick Save**: accept incoming files without asking.\n- **Save to Photos**: move received photos and videos into Photos (default on).\n- **Run in Background**: stay discoverable and able to receive with OldSend closed (default off). When the phone sleeps, iOS pauses it, so it doesn't use battery.",
       "screenshots": [
-        {"file": "receive.png", "alt": "Receive page with the network info card"},
+        {"file": "receive.png", "alt": "Receive page, ready for nearby LocalSend devices"},
         {"file": "send.png", "alt": "Send page with a nearby LocalSend device"},
         {"file": "transfer.png", "alt": "Live transfer screen while receiving three files"},
         {"file": "share-sheet.png", "alt": "OldSend in Safari's share sheet"},

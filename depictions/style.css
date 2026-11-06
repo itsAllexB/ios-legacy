@@ -258,7 +258,7 @@ img { border: 0; }
 .here {
   display: none;
   margin-left: 5px;
-  color: #6b7486;
+  color: #4c566c;
   font-size: 13px;
   font-weight: normal;
 }
@@ -353,7 +353,7 @@ a.row:active .val { color: #fff; }
   line-height: 20px;
 }
 .tw .d { display: block; margin-top: 1px; color: #3e4757; font-size: 13px; line-height: 17px; }
-.tw .m { display: block; margin-top: 2px; color: #6b7486; font-size: 12px; line-height: 16px; }
+.tw .m { display: block; margin-top: 2px; color: #626b7d; font-size: 12px; line-height: 16px; }
 a.tw:active .ver, a.tw:active .d, a.tw:active .m { color: #fff; }
 
 /* Text inside a cell */
@@ -400,7 +400,13 @@ details[open] > summary:after {
 
 /* Screenshots */
 
+/* Cydia's package page puts this page in an iframe that grows to the page's minimum width.
+   The width and min-width stop the long strip from setting that minimum. */
 .shots {
+  width: 1px;
+  min-width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 0 20px;
   padding: 1px 9px 5px;
   overflow-x: auto;
@@ -452,6 +458,7 @@ details[open] > summary:after {
   .main { float: right; width: 628px; }
   .side .hero { margin-left: 19px; margin-right: 9px; }
   .side .glass, .side .group, .side .pair { margin-left: 9px; margin-right: 9px; }
+  .side .pair .glass { margin: 0 0 1px; }
   .side .sec, .side .foot { margin-left: 19px; margin-right: 19px; }
   .main .glass, .main .group, .main .seg-w { margin-left: 9px; margin-right: 9px; }
   .main .sec, .main .foot { margin-left: 19px; margin-right: 19px; }

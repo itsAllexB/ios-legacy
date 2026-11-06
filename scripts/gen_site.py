@@ -114,12 +114,14 @@ def icon(pkg, meta, prefix, big=False):
 
 # Old-style JavaScript on purpose. It only adds classes: inapp (inside a package manager, which has
 # its own bar), cydiaonly (too old for Sileo and Zebra), notios (a computer, nothing to add it to).
+# Cydia's package page shows this page in an iframe, so links there must leave the frame.
 HEAD_SCRIPT = (
     "<script>(function(d,u){var m=/\\bOS (\\d+)_\\d/.exec(u),s=' js';"
     "if(/Cydia|Zebra|Sileo|Installer/.test(u))s+=' inapp';"
     "if(m){if(+m[1]<9)s+=' cydiaonly';}"
     "else if(!(navigator.maxTouchPoints>1))s+=' notios';"
-    "d.documentElement.className+=s;window.iosMajor=m?m[1]:'';})(document,navigator.userAgent);</script>"
+    "d.documentElement.className+=s;window.iosMajor=m?m[1]:'';"
+    "if(window.top!==window.self)d.write('<base target=\"_top\">');})(document,navigator.userAgent);</script>"
 )
 
 

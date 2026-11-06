@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7d93b0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2c384a" media="(prefers-color-scheme: dark)">
 <title>Add iOS Legacy to Sileo</title>
 <link rel="stylesheet" href="../depictions/style.css">
+<link rel="apple-touch-icon-precomposed" href="../CydiaIcon.png">
+<link rel="icon" href="../CydiaIcon.png">
 <script>window.location.replace("sileo://source/https://itsallexb.github.io/ios-legacy/");</script>
+<script>(function(d,u){var m=/\bOS (\d+)_\d/.exec(u),s=' js';if(/Cydia|Zebra|Sileo|Installer/.test(u))s+=' inapp';if(m){if(+m[1]<9)s+=' cydiaonly';}else if(!(navigator.maxTouchPoints>1))s+=' notios';d.documentElement.className+=s;window.iosMajor=m?m[1]:'';})(document,navigator.userAgent);</script>
 </head>
-<body>
-<main>
-<div class="card">
-<h1>Add iOS Legacy to Sileo</h1>
-<p>Sileo should open now. If it doesn't, tap the button below on your jailbroken device.</p>
-<div class="buttons"><a class="btn" href="sileo://source/https://itsallexb.github.io/ios-legacy/">Open Sileo</a></div>
-<p class="small muted">Or add this source by hand: <code>https://itsallexb.github.io/ios-legacy/</code></p>
-<p class="small"><a href="../">Back to iOS Legacy</a></p>
-</div>
+<body ontouchstart="">
+<div class="nav"><div class="nav-in"><a class="back" href="../">iOS Legacy</a><h1>Add Source</h1></div></div>
+<main class="wrap">
+<div class="hero"><span class="ic big"><img src="../CydiaIcon.png" alt="" width="72" height="72"></span><h2>iOS Legacy</h2><p>Sileo should open now.</p></div>
+<a class="glass blue" href="sileo://source/https://itsallexb.github.io/ios-legacy/">Open Sileo</a>
+<p class="foot deskhint">Open this page on your iPhone or iPad.</p>
+<ul class="group"><li><div class="row"><span class="lbl">Or add this URL in Sources</span><span class="url">https://itsallexb.github.io/ios-legacy/</span></div></li></ul>
 </main>
 </body>
 </html>

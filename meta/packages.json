@@ -5,12 +5,21 @@
     "maintainer": "itsAllexB",
     "github": "itsAllexB/ios-legacy"
   },
+  "site": {
+    "tagline": "Tweaks for older iPhones and iPads.",
+    "groups": [
+      {"ios": "12", "footer": "Tested on iPad mini 2 with iOS 12.5.8."},
+      {"ios": "6", "footer": "Tested on iPhone 4S with iOS 6.1.3."}
+    ]
+  },
   "packages": {
     "com.itsallexb.splitviewenabler": {
       "short": "splitviewenabler",
       "github": "itsAllexB/SplitViewEnabler-iOS12",
       "tint": "#3478F6",
       "tagline": "Split View and Slide Over on iPads that only had Slide Over.",
+      "summary": "Split View on iPads that only had Slide Over.",
+      "devices": "iPad mini 2, iPad mini 3, iPad Air",
       "description": "Apple left Split View out on some iPads that run iOS 12, such as the iPad mini 2, iPad mini 3 and the first iPad Air. They only get Slide Over.\n\nSplitViewEnabler turns on real Split View, so two apps can share the screen side by side. It can also put a Slide Over app on top of a Split View, like on newer iPads.\n\nTo use it, drag an app from the Dock to the left or right edge of the screen, or pull a Slide Over app down by its top handle. Apps that don't support multitasking (such as Settings) stay full screen.",
       "features": [
         "Split View: two apps side by side, in portrait and landscape",
@@ -26,8 +35,8 @@
       ],
       "settings": "Settings > Split View:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Mode**: *Split View + Slide Over* (default, like iPads with official Split View), *Split View, 2 apps max* (uses less memory), or *Slide Over only (stock)*.\n- **Respring**: restarts SpringBoard. Only needed if a Split View is open while you change the mode.",
       "screenshots": [
-        {"file": "split-view-portrait.png", "alt": "Mail and Notes side by side in portrait"},
-        {"file": "split-view-safari-weather.png", "alt": "Safari and Weather side by side in portrait"},
+        {"file": "split-view-portrait.png", "web": false, "alt": "Mail and Notes side by side in portrait"},
+        {"file": "split-view-safari-weather.png", "web": false, "alt": "Safari and Weather side by side in portrait"},
         {"file": "settings.png", "alt": "Split View settings page"}
       ],
       "changelog": [
@@ -40,6 +49,8 @@
       "github": "itsAllexB/WeatherPad-iOS12",
       "tint": "#2F8FD8",
       "tagline": "Apple's iPhone Weather app, running natively on iPad.",
+      "summary": "The iPhone Weather app, native on iPad.",
+      "devices": "iPad",
       "description": "iPads on iOS 12 have no Weather app. WeatherPad makes Apple's iPhone Weather app for iOS 12 run like a real iPad app: it fills the whole screen, works in portrait and landscape, and adapts to Split View and Slide Over.\n\nWeatherPad needs Apple's iPhone Weather app on the iPad. The [installer](https://github.com/itsAllexB/WeatherPad-iOS12/tree/main/installer) downloads it and its animated backgrounds directly from Apple and installs them. Apple's files are not included in the package.",
       "features": [
         "Adaptive iPad layout: two columns when the window is 660 pt or wider, iPhone layouts below that",
@@ -56,10 +67,10 @@
       ],
       "settings": "Settings > Weather for iPad:\n\n- **Enabled**: turns all fixes on or off. Layout changes apply the next time Weather opens.\n- **Widget Opens Weather App**: tapping the Weather widget opens the Weather app for that city instead of weather.com. Applies right away.\n- **Use iPhone Layout**: runs Weather like any iPhone app (2x button, no multitasking) instead of the iPad layout. Needs a respring, then reopen Weather.\n- **Animated Backgrounds**: shows the animated backgrounds scaled to fill the screen. Needs the backgrounds from the installer; without them, or when off, Weather shows a plain gradient.\n- **Respring**: restarts SpringBoard.",
       "screenshots": [
-        {"file": "weather-portrait.jpg", "alt": "Weather in portrait"},
-        {"file": "weather-landscape.jpg", "alt": "Weather in landscape, two columns"},
-        {"file": "weather-thunderstorm.jpg", "alt": "Animated thunderstorm background"},
-        {"file": "weather-slide-over.jpg", "alt": "Weather in Slide Over"},
+        {"file": "weather-portrait.jpg", "web": false, "alt": "Weather in portrait"},
+        {"file": "weather-landscape.jpg", "web": false, "alt": "Weather in landscape, two columns"},
+        {"file": "weather-thunderstorm.jpg", "web": false, "alt": "Animated thunderstorm background"},
+        {"file": "weather-slide-over.jpg", "web": false, "alt": "Weather in Slide Over"},
         {"file": "settings.png", "alt": "Weather for iPad settings page"}
       ],
       "changelog": [
@@ -72,6 +83,8 @@
       "github": "itsAllexB/FilesArchiver-iOS12",
       "tint": "#AF52DE",
       "tagline": "Uncompress and Compress in the Files app, like iOS 13.",
+      "summary": "Compress and uncompress in the Files app.",
+      "devices": "iPhone and iPad",
       "description": "On iOS 12 the Files app can only peek into a zip file. It can't extract it, and it can't make archives at all.\n\nFilesArchiver adds **Uncompress** and **Compress** to the menu you get when you touch and hold an item, and **Compress** to the top bar when you select several items. It opens zip (including password-protected zips), 7z, rar, tar, tar.gz and many more, and creates zip, tar.gz or 7z archives.\n\nArchives are treated as untrusted: everything is extracted into a private folder and checked first, `../` paths and unsafe links are dropped, and nothing is ever written over an existing file.",
       "features": [
         "Uncompress zip (with a password prompt for password-protected zips), 7z, rar and rar5, tar, tar.gz, tar.bz2, tar.xz, tar.zst, gz, bz2, xz, zst, lz4, cpio, xar, iso, cab, lha, deb, ipa, cbz/cbr/cb7",
@@ -105,6 +118,8 @@
       "github": "itsAllexB/FilesRoot-iOS12",
       "tint": "#5E687C",
       "tagline": "Browse the whole filesystem in the Files app. Read-only by default.",
+      "summary": "Browse the whole filesystem in the Files app.",
+      "devices": "iPhone and iPad",
       "description": "FilesRoot adds a **System** location to the Files app sidebar that starts at `/`, the root of the filesystem. Look around, preview files with Quick Look, copy files out to On My iPad, and open or share them with other apps, all without a separate file manager.\n\n**It is read-only by default.** Changes can be allowed in Settings > Files Root, but system locations such as /System, /usr, /Library, /Applications, /etc and the jailbreak's own files always stay read-only, the filesystem layout can't be deleted or moved, and links can't be used to get around this. FilesRoot works as the mobile user, never as root. Deleting in this location is permanent.\n\nIf System is missing after installing, open Files > Browse, tap Edit and turn it on.",
       "features": [
         "A \"System\" location in Files, starting at / or at /var/mobile, with a name you can change",
@@ -137,6 +152,8 @@
       "github": "itsAllexB/FilesExtensions-iOS12",
       "tint": "#0091A0",
       "tagline": "Show or hide file name extensions in the Files app.",
+      "summary": "Show or hide file extensions in the Files app.",
+      "devices": "iPhone and iPad",
       "description": "iOS 12's Files app drops the last extension of every file, whatever it is: `a.txt` shows as \"a\", and `patch_dyld.ios` and `patch_dyld.tvos` both show as \"patch_dyld\". FilesExtensions shows the full names. You can also hide only the extensions iOS knows, like the Finder on a Mac, or keep the iOS behaviour.\n\nOnly what you see changes. No file is renamed.",
       "features": [
         "Show All Extensions (default), Hide Known Extensions, or Hide All Extensions (iOS Default)",
@@ -167,6 +184,8 @@
       "github": "itsAllexB/BatteryPlus-iOS12",
       "tint": "#2DA44E",
       "tagline": "Low Power Mode, Automatic Low Power Mode, Battery Health and the percentage inside the battery icon for iOS 12 iPads.",
+      "summary": "Low Power Mode and Battery Health for iPad.",
+      "devices": "iPad",
       "description": "On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.\n\n**Low Power Mode** gets its own page in Settings > Battery and, with CCSupport, a module in Control Center. It is the real iOS mode: mail fetch, iCloud Photos, dynamic wallpapers and other background work pause. **Automatic Low Power Mode** turns it on when the battery drops to 5, 10, 15 or 20% and off again at 80%; Low Power Mode you turn on yourself stays on until you turn it off.\n\n**Battery Percentage** can be off, next to the battery icon, or **inside it, like modern iOS**, also in Control Center, where it matches the status bar exactly. **Battery Health** shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself, and an optional **Unplug Reminder** tells you when the iPad has charged to the level you choose.",
       "features": [
         "Low Power Mode in Settings > Battery, as on iPhone, and in Control Center (needs CCSupport)",
@@ -185,14 +204,14 @@
       ],
       "settings": "Settings > Battery:\n\n- **Battery Percentage**: Off, Next to Icon or Inside Icon.\n- **Low Power Mode**: Automatic (**Turn On Automatically**, off; **Turn On At** 5% to 20%) and Manual (the **Low Power Mode** switch).\n- **Battery Health**: Maximum Capacity, Cycle Count and Manufacture Date.\n- **Charging**: **Unplug Reminder** (off) and **Remind At** (80% to 100%).\n\nControl Center: Settings > Control Center > Customize Controls > Low Power Mode (needs CCSupport).",
       "screenshots": [
-        {"file": "battery.png", "alt": "Settings > Battery with Battery Percentage, Low Power Mode, Battery Health and Charging"},
-        {"file": "low-power-mode.png", "alt": "Low Power Mode page with Automatic and Manual"},
-        {"file": "battery-percentage.png", "alt": "Battery Percentage: Off, Next to Icon, Inside Icon"},
+        {"file": "battery.png", "crop_left": 0.417, "alt": "Settings > Battery with Battery Percentage, Low Power Mode, Battery Health and Charging"},
+        {"file": "low-power-mode.png", "crop_left": 0.417, "alt": "Low Power Mode page with Automatic and Manual"},
+        {"file": "battery-percentage.png", "crop_left": 0.417, "alt": "Battery Percentage: Off, Next to Icon, Inside Icon"},
         {"file": "control-center-match.png", "alt": "The percentage inside the battery icon, in the status bar and in Control Center"},
-        {"file": "battery-health.png", "alt": "Battery Health page"},
-        {"file": "charging.png", "alt": "Charging page with the Unplug Reminder"},
-        {"file": "unplug-reminder.png", "alt": "Unplug Reminder alert"},
-        {"file": "control-center.png", "alt": "Low Power Mode module in Control Center"}
+        {"file": "battery-health.png", "crop_left": 0.417, "alt": "Battery Health page"},
+        {"file": "charging.png", "crop_left": 0.417, "alt": "Charging page with the Unplug Reminder"},
+        {"file": "unplug-reminder.png", "web": false, "alt": "Unplug Reminder alert"},
+        {"file": "control-center.png", "web": false, "alt": "Low Power Mode module in Control Center"}
       ],
       "changelog": [
         {"version": "1.2.0", "changes": ["Automatic Low Power Mode: turns on when the battery drops to 5, 10, 15 or 20%, and off again at 80%.", "Low Power Mode you turn on yourself stays on until you turn it off.", "Settings > Battery has a Battery Percentage page (Off, Next to Icon, Inside Icon) and a Low Power Mode page (Automatic, Manual). The Status Bar page is gone.", "Battery Percentage can be changed in Low Power Mode, which no longer forces it on.", "Percentage inside the icon: easier to read in Low Power Mode and while charging, and in Control Center it now looks exactly like the status bar, charging bolt included.", "Battery Colours removed: the battery uses iOS 12's own colours.", "Charging no longer shows the unavailable Charge Limit."]},
@@ -204,6 +223,8 @@
       "github": "itsAllexB/DefaultApps-iOS12",
       "tint": "#5856D6",
       "tagline": "Choose your default browser, mail app and maps app.",
+      "summary": "Choose your default browser, mail and maps apps.",
+      "devices": "iPhone and iPad",
       "description": "On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.\n\nBrowser, Mail and Maps start on Safari, Mail and Maps, so nothing changes until you pick an app.\n\nSafari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.",
       "features": [
         "Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera",
@@ -221,7 +242,7 @@
       "settings": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Each list shows the Apple app and the supported apps that are installed, with their icons; the note under each list names the other supported apps.",
       "screenshots": [
         {"file": "settings.png", "alt": "Default Apps settings page"},
-        {"file": "maps-picker.png", "alt": "Maps picker with Maps and Google Maps, each with its icon"},
+        {"file": "maps-picker.png", "web": false, "alt": "Maps picker with Maps and Google Maps, each with its icon"},
         {"file": "google-maps-place.jpg", "alt": "An Apple Maps link opened in Google Maps"},
         {"file": "google-maps-route.png", "alt": "An Apple Maps route opened in Google Maps"},
         {"file": "mailto-fields.png", "alt": "The fields a mail app receives from a mailto link"}
@@ -237,6 +258,9 @@
       "github": "itsAllexB/SafariScale-iOS6",
       "tint": "#1A84F0",
       "tagline": "Smaller web pages in Safari on iOS 6, like zooming out in a desktop browser.",
+      "summary": "Smaller web pages in Safari.",
+      "devices": "iPhone 4S",
+      "gloss": false,
       "description": "Modern websites are made for phones that are much bigger. On a 3.5-inch screen they look cramped: big text, huge buttons and very little on screen at once. SafariScale shows pages at 80% of their size by default, or anywhere from 30% to 100%, so more fits on the screen.\n\nThe page gets a real, wider layout and is shown smaller, so nothing is cut off or broken: links, forms, menus, pinch zoom and rotation all keep working. Works with **Web Port** (lululab's modern WebKit for iOS 6) as well as Safari's own engine.",
       "features": [
         "Page Size: 30% to 100% in steps of 10% (80% default, 100% is the iOS default)",
@@ -278,6 +302,9 @@
       "github": "itsAllexB/OldSend",
       "tint": "#2B8A90",
       "tagline": "Send files, photos, links and text between an iOS 6 iPhone and any device running LocalSend.",
+      "summary": "Send files to any device running LocalSend.",
+      "devices": "Retina iPhones",
+      "gloss": false,
       "description": "OldSend 2.0 is my version of **OldSend by lihaoyun6**, the native LocalSend client for old iPhones, made for iOS 6 on Retina iPhones. It talks to the LocalSend app on today's phones and computers (Windows, macOS, Linux, Android, iOS) over your Wi-Fi: no cables, no cloud.\n\nShare from any app with the OldSend button in the share sheet, watch every file on a live transfer screen, and turn on **Run in Background** to stay discoverable with the app closed.",
       "features": [
         "Works with LocalSend everywhere (protocol v2.2 over TLS 1.2), including sending to LocalSend on desktop",
@@ -299,7 +326,7 @@
         {"file": "receive.png", "alt": "Receive page, ready for nearby LocalSend devices"},
         {"file": "send.png", "alt": "Send page with a nearby LocalSend device"},
         {"file": "transfer.png", "alt": "Live transfer screen while receiving three files"},
-        {"file": "share-sheet.png", "alt": "OldSend in Safari's share sheet"},
+        {"file": "share-sheet.png", "web": false, "alt": "OldSend in Safari's share sheet"},
         {"file": "settings.png", "alt": "Settings: Quick Save, Save to Photos and Run in Background"},
         {"file": "about.png", "alt": "Credits to lihaoyun6 and the LocalSend team"}
       ],

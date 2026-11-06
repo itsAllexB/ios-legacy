@@ -2,32 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DefaultApps (iOS 12)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7d93b0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2c384a" media="(prefers-color-scheme: dark)">
+<title>DefaultApps</title>
 <link rel="stylesheet" href="../depictions/style.css">
+<link rel="apple-touch-icon-precomposed" href="../CydiaIcon.png">
+<link rel="icon" href="../CydiaIcon.png">
+<script>(function(d,u){var m=/\bOS (\d+)_\d/.exec(u),s=' js';if(/Cydia|Zebra|Sileo|Installer/.test(u))s+=' inapp';if(m){if(+m[1]<9)s+=' cydiaonly';}else if(!(navigator.maxTouchPoints>1))s+=' notios';d.documentElement.className+=s;window.iosMajor=m?m[1]:'';})(document,navigator.userAgent);</script>
 </head>
-<body>
-<main>
-<div class="card head"><img src="../icons/com.itsallexb.defaultapps.png" alt="">
-<div><h1>DefaultApps (iOS 12)</h1><div class="muted">Choose your default browser, mail app and maps app.</div></div></div>
-<div class="card"><p>On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.</p>
+<body ontouchstart="">
+<div class="nav"><div class="nav-in"><a class="back" href="../">iOS Legacy</a><h1>DefaultApps</h1></div></div>
+<main class="wrap">
+<div class="side">
+<div class="hero"><span class="ic big gloss"><img src="../icons/com.itsallexb.defaultapps.png" alt="" width="72" height="72"></span><h2>DefaultApps</h2><p>Choose your default browser, mail and maps apps.</p></div>
+<div class="addblock pkgadd">
+<a class="glass blue" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://itsallexb.github.io/ios-legacy/">Add to Cydia</a>
+<div class="pair"><a class="glass silver" href="sileo://source/https://itsallexb.github.io/ios-legacy/">Add to Sileo</a><a class="glass silver" href="zbra://sources/add/https://itsallexb.github.io/ios-legacy/">Add to Zebra</a></div>
+<p class="foot deskhint">Open this page on your iPhone or iPad.</p>
+</div>
+</div>
+<div class="main">
+<ul class="group"><li><div class="text"><p>On iOS 12, web links always open in Safari, email links in Mail and map links in Maps. DefaultApps lets you pick other apps for all three, like Default Apps on iOS 14. Links that other apps open (Notes, Messages, Mail, Firefox and so on) then go to the apps you chose.</p>
 <p>Browser, Mail and Maps start on Safari, Mail and Maps, so nothing changes until you pick an app.</p>
-<p>Safari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.</p></div>
-<div class="card"><h2>Screenshots</h2><div class="shots"><img src="screenshots/defaultapps/settings.png" alt="Default Apps settings page" loading="lazy"><img src="screenshots/defaultapps/maps-picker.png" alt="Maps picker with Maps and Google Maps, each with its icon" loading="lazy"><img src="screenshots/defaultapps/google-maps-place.jpg" alt="An Apple Maps link opened in Google Maps" loading="lazy"><img src="screenshots/defaultapps/google-maps-route.png" alt="An Apple Maps route opened in Google Maps" loading="lazy"><img src="screenshots/defaultapps/mailto-fields.png" alt="The fields a mail app receives from a mailto link" loading="lazy"></div></div>
-<div class="card"><h2>Features</h2><ul><li>Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera</li><li>Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in</li><li>Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route</li><li>Email addresses tapped in Notes, Messages and other text open in the chosen mail app</li><li>Each list shows Safari, Mail or Maps and the supported apps that are installed, with their icons</li></ul></div>
-<div class="card"><h2>Settings</h2><p>Settings &gt; Default Apps:</p>
-<ul><li><strong>Enabled</strong>: turns the tweak on or off. Applies right away.</li><li><strong>Browser</strong>, <strong>Mail</strong>, <strong>Maps</strong>: the app for each kind of link. Each list shows the Apple app and the supported apps that are installed, with their icons; the note under each list names the other supported apps.</li></ul></div>
-<div class="card"><h2>Compatibility</h2><ul><li>Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)</li><li>Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)</li><li>The apps must be installed and still run on iOS 12</li><li>Apps that show Apple's own mail sheet ("Share by Mail") still use Apple Mail, as on iOS 14</li></ul></div>
-<div class="card"><h2>Changelog</h2><p><strong>Version 3.1.0</strong></p><ul><li>The lists show Safari, Mail and Maps by name instead of "Default (Apple)".</li><li>Each app in the lists shows its icon.</li></ul><p><strong>Version 3.0.1</strong></p><ul><li>First public release: choose the browser, the mail app and the maps app.</li></ul><p><strong>Version 3.0.0</strong></p><ul><li>Test version (not published).</li></ul></div>
-<div class="card"><h2>Information</h2><table>
-<tr><td>Version</td><td>3.1.0</td></tr>
-<tr><td>Developer</td><td>itsAllexB</td></tr>
-<tr><td>Size</td><td>31 KB</td></tr>
-<tr><td>License</td><td>GPL-3.0</td></tr>
-<tr><td>Source code</td><td><a href="https://github.com/itsAllexB/DefaultApps-iOS12">GitHub</a></td></tr>
-<tr><td>Problems</td><td><a href="https://github.com/itsAllexB/DefaultApps-iOS12/issues">Report an issue</a></td></tr>
-</table></div>
-<p class="muted small">Unofficial. Not affiliated with or endorsed by Apple.</p>
+<p>Safari, Mail and Maps still open normally from their icons. If a chosen app is removed, or a link can't be expressed in its format, the link opens in the Apple app as before.</p></div></li></ul>
+<div class="shots"><a href="screenshots/defaultapps/settings.png" style="width:188px;height:260px"><img src="screenshots/defaultapps/settings.png" alt="Default Apps settings page" width="188" height="260" loading="lazy"></a><a href="screenshots/defaultapps/google-maps-place.jpg" style="width:195px;height:260px"><img src="screenshots/defaultapps/google-maps-place.jpg" alt="An Apple Maps link opened in Google Maps" width="195" height="260" loading="lazy"></a><a href="screenshots/defaultapps/google-maps-route.png" style="width:235px;height:260px"><img src="screenshots/defaultapps/google-maps-route.png" alt="An Apple Maps route opened in Google Maps" width="235" height="260" loading="lazy"></a><a href="screenshots/defaultapps/mailto-fields.png" style="width:296px;height:164px"><img src="screenshots/defaultapps/mailto-fields.png" alt="The fields a mail app receives from a mailto link" width="296" height="164" loading="lazy"></a></div>
+<h2 class="sec">Features</h2>
+<ul class="group"><li><div class="line">Browsers: Firefox, Chrome, Brave, DuckDuckGo, Firefox Focus, Firefox Klar, Microsoft Edge, Opera</div></li><li><div class="line">Mail: Gmail, Outlook, Spark, Yahoo Mail, Proton Mail, Airmail, Fastmail, myMail, with To, Cc, Bcc, Subject and Body filled in</div></li><li><div class="line">Maps: Google Maps, Waze, Citymapper, Yandex Maps, Organic Maps, MAPS.ME, at the same place, search or route</div></li><li><div class="line">Email addresses tapped in Notes, Messages and other text open in the chosen mail app</div></li><li><div class="line">Each list shows Safari, Mail or Maps and the supported apps that are installed, with their icons</div></li></ul>
+<h2 class="sec">Compatibility</h2>
+<ul class="group"><li><div class="line">Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)</div></li><li><div class="line">Expected to work on iOS 12.x, on iPhone as well as iPad (tested on iPad)</div></li><li><div class="line">The apps must be installed and still run on iOS 12</div></li><li><div class="line">Apps that show Apple's own mail sheet ("Share by Mail") still use Apple Mail, as on iOS 14</div></li></ul>
+<ul class="group"><li><details><summary>Settings</summary><div class="text"><p>Settings &gt; Default Apps:</p>
+<ul><li><strong>Enabled</strong>: turns the tweak on or off. Applies right away.</li><li><strong>Browser</strong>, <strong>Mail</strong>, <strong>Maps</strong>: the app for each kind of link. Each list shows the Apple app and the supported apps that are installed, with their icons; the note under each list names the other supported apps.</li></ul></div></details></li></ul>
+<h2 class="sec">What's New</h2><ul class="group"><li><div class="text"><p class="ver-t">Version 3.1.0</p><ul><li>The lists show Safari, Mail and Maps by name instead of "Default (Apple)".</li><li>Each app in the lists shows its icon.</li></ul></div></li></ul>
+<ul class="group"><li><details><summary>Version History</summary><div class="text"><p class="ver-t">Version 3.0.1</p><ul><li>First public release: choose the browser, the mail app and the maps app.</li></ul></div><div class="text"><p class="ver-t">Version 3.0.0</p><ul><li>Test version (not published).</li></ul></div></details></li></ul>
+</div>
+<div class="side">
+<h2 class="sec">Information</h2>
+<ul class="group"><li><div class="row"><span class="val">3.1.0</span>Version</div></li><li><div class="row"><span class="val">itsAllexB</span>Developer</div></li><li><div class="row"><span class="val">31 KB</span>Size</div></li><li><div class="row"><span class="val">iOS 12</span>Requires</div></li><li><div class="row"><span class="val">iPhone and iPad</span>Devices</div></li><li><div class="row"><span class="val">GPL-3.0</span>License</div></li></ul>
+<ul class="group"><li><a class="row" href="https://github.com/itsAllexB/DefaultApps-iOS12">Source Code</a></li><li><a class="row" href="https://github.com/itsAllexB/DefaultApps-iOS12/issues">Report a Problem</a></li></ul>
+</div>
+<p class="legal">Unofficial. Not affiliated with or endorsed by Apple.</p>
 </main>
 </body>
 </html>

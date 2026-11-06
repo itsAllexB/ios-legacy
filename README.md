@@ -118,7 +118,7 @@ Optional fields: `"gloss": false` for an icon that has its own shine, and `"ios"
 
 To see the pages locally, run `ALLOW_UNSIGNED=1 scripts/build-repo.sh`, then `python3 -m http.server`. This rewrites the APT files, so run `git checkout -- Packages Packages.gz Packages.bz2 Packages.xz Release Release.gpg InRelease` before you commit.
 
-Known limitations: on iOS 6 it has been tested on an iPhone 4 emulator (LightTouch) with iOS 6.1.3, not yet on a real iPhone or an iPad. Screenshots marked `"web": false` are hidden from the web pages only: they're still in the Sileo depictions and at their URLs.
+Known limitations: on iOS 6 it has been tested on an iPhone 4 emulator (LightTouch) with iOS 6.1.3, not yet on a real iPhone or an iPad. Landscape text couldn't be checked there, as the emulator garbles it on any page. Screenshots marked `"web": false` are hidden from the web pages only: they're still in the Sileo depictions and at their URLs.
 
 ### Publishing
 

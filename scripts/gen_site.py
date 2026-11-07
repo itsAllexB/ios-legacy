@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 itsAllexB
+# Copyright (C) 2026 AllexB
 """Generate the public web pages: index.html, depictions/<pkg>.html and add/*.html.
 
 The pages are plain HTML for depictions/style.css. They have to work in Safari and Cydia on
@@ -226,7 +226,7 @@ def changes(entry):
 
 def package_page(pkg, ctl, meta, base, size):
     name = display_name(ctl, pkg)
-    developer = plain_person(ctl.get("Author", "itsAllexB"))
+    developer = plain_person(ctl.get("Author", "AllexB"))
     maintainer = plain_person(ctl.get("Maintainer", ""))
     ios = ios_version(ctl, meta)
     repo_url = f"https://github.com/{meta['github']}"

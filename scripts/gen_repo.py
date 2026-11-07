@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 itsAllexB
+# Copyright (C) 2026 AllexB
 """Generate the APT index (Packages*, Release) and the Sileo depictions, then the web pages.
 
 Reads every debs/*.deb (control fields via `dpkg-deb -f`) and meta/packages.json.
@@ -125,7 +125,7 @@ def sileo_depiction(pkg, ctl, meta, base, size):
         {"class": "DepictionMarkdownView", "markdown": bullets_md(meta["compatibility"]), "useSpacing": True},
         {"class": "DepictionSeparatorView"},
         {"class": "DepictionTableTextView", "title": "Version", "text": ctl["Version"]},
-        {"class": "DepictionTableTextView", "title": "Developer", "text": ctl.get("Author", "itsAllexB")},
+        {"class": "DepictionTableTextView", "title": "Developer", "text": ctl.get("Author", "AllexB")},
         {"class": "DepictionTableTextView", "title": "Size", "text": f"{max(1, round(size / 1024))} KB"},
         {"class": "DepictionTableTextView", "title": "License", "text": "GPL-3.0"},
         {"class": "DepictionTableButtonView", "title": "Source Code", "action": repo_url, "openExternal": True},

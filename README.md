@@ -2,7 +2,7 @@
 
 <img src="CydiaIcon.png" alt="" width="96" align="right">
 
-A small package source (APT repo) for jailbroken iPads and iPhones on iOS 12 and iOS 6, with tweaks by itsAllexB. It works with Sileo, Zebra and Cydia (including Cydia on iOS 6).
+A small package source (APT repo) for jailbroken iPads and iPhones on iOS 12 and iOS 6, with tweaks by AllexB. It works with Sileo, Zebra and Cydia (including Cydia on iOS 6).
 
 Source URL:
 

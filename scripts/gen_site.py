@@ -91,9 +91,15 @@ def short_text(ctl, meta):
     return meta.get("summary") or meta.get("tagline") or ctl.get("Description", "").split("\n")[0]
 
 
-def plain_person(field):
-    """A name from a control field, without any address in angle brackets."""
-    return re.sub(r"\s*<[^>]*>", "", field).strip()
+def plain_person(field, names=None):
+    """A name from a control field, without any address in angle brackets, as the pages show it.
+    site.names in meta/packages.json maps a handle in the debs to a name (itsAllexB -> AllexB)."""
+    name = re.sub(r"\s*<[^>]*>", "", field).strip()
+    return (names or {}).get(name, name)
+
+
+def site_names(meta_all):
+    return meta_all.get("site", {}).get("names", {})
 
 
 def has_icon(pkg):
@@ -224,10 +230,10 @@ def changes(entry):
     ) + "</ul>"
 
 
-def package_page(pkg, ctl, meta, base, size):
+def package_page(pkg, ctl, meta, base, size, names=None):
     name = display_name(ctl, pkg)
-    developer = plain_person(ctl.get("Author", "AllexB"))
-    maintainer = plain_person(ctl.get("Maintainer", ""))
+    developer = plain_person(ctl.get("Author", "AllexB"), names)
+    maintainer = plain_person(ctl.get("Maintainer", ""), names)
     ios = ios_version(ctl, meta)
     repo_url = f"https://github.com/{meta['github']}"
 
@@ -361,7 +367,7 @@ def index_page(latest, meta_all, base, fingerprint):
     body = f"""{nav(repo['name'])}
 <main class="wrap">
 <div class="side">
-<div class="hero"><span class="ic big"><img src="CydiaIcon.png" alt="" width="72" height="72"></span><h2>{html.escape(repo['name'])}</h2><p>{html.escape(site.get('tagline', repo['description']))}</p><p>By {html.escape(repo['maintainer'])}</p></div>
+<div class="hero"><span class="ic big"><img src="CydiaIcon.png" alt="" width="72" height="72"></span><h2>{html.escape(repo['name'])}</h2><p>{html.escape(site.get('tagline', repo['description']))}</p><p>By {html.escape(plain_person(repo['maintainer'], site_names(meta_all)))}</p></div>
 {add_buttons(base)}
 <ul class="group"><li><div class="row"><span class="lbl">Or add this URL in Sources</span><span class="url">{html.escape(base)}</span></div></li></ul>
 </div>
@@ -406,7 +412,7 @@ def write_site(latest, meta_all, base, fingerprint):
     for pkg, (ctl, size) in latest.items():
         meta = meta_all["packages"].get(pkg)
         if meta:
-            write_if_changed(f"depictions/{pkg}.html", package_page(pkg, ctl, meta, base, size))
+            write_if_changed(f"depictions/{pkg}.html", package_page(pkg, ctl, meta, base, size, site_names(meta_all)))
     write_if_changed("index.html", index_page(latest, meta_all, base, fingerprint))
     for manager, url in add_urls(base).items():
         write_if_changed(f"add/{manager.lower()}.html", add_page(manager, url, base, meta_all["repo"]["name"]))

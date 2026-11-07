@@ -23,7 +23,7 @@ import re
 import subprocess
 import sys
 
-from gen_site import bullets_md, image_size, write_if_changed, write_site
+from gen_site import bullets_md, image_size, ios_version, plain_person, site_names, write_if_changed, write_site
 
 # Order used when writing control stanzas (remaining fields follow alphabetically).
 FIELD_ORDER = [
@@ -89,7 +89,7 @@ def file_hashes(data):
 
 # --- outputs ---
 
-def sileo_depiction(pkg, ctl, meta, base, size):
+def sileo_depiction(pkg, ctl, meta, base, size, names=None):
     shots_dir = f"depictions/screenshots/{meta['short']}"
     groups = {}
     for s in meta.get("screenshots", []):
@@ -125,7 +125,7 @@ def sileo_depiction(pkg, ctl, meta, base, size):
         {"class": "DepictionMarkdownView", "markdown": bullets_md(meta["compatibility"]), "useSpacing": True},
         {"class": "DepictionSeparatorView"},
         {"class": "DepictionTableTextView", "title": "Version", "text": ctl["Version"]},
-        {"class": "DepictionTableTextView", "title": "Developer", "text": ctl.get("Author", "AllexB")},
+        {"class": "DepictionTableTextView", "title": "Developer", "text": plain_person(ctl.get("Author", "AllexB"), names)},
         {"class": "DepictionTableTextView", "title": "Size", "text": f"{max(1, round(size / 1024))} KB"},
         {"class": "DepictionTableTextView", "title": "License", "text": "GPL-3.0"},
         {"class": "DepictionTableButtonView", "title": "Source Code", "action": repo_url, "openExternal": True},
@@ -149,9 +149,14 @@ def sileo_depiction(pkg, ctl, meta, base, size):
 
 
 def readme_table(latest, meta_all):
-    """Package table for README.md, between the packages:start/end markers."""
+    """Package table for README.md, between the packages:start/end markers: by iOS version, oldest first, then by name."""
     rows = ["| Package | Version | What it does |", "| --- | --- | --- |"]
-    for pkg in sorted(latest, key=lambda p: latest[p][0].get("Name", p).lower()):
+
+    def order(p):
+        ios = ios_version(latest[p][0], meta_all["packages"].get(p, {}))
+        return (int(ios) if ios and ios.isdigit() else 999, latest[p][0].get("Name", p).lower())
+
+    for pkg in sorted(latest, key=order):
         ctl, _ = latest[pkg]
         m = meta_all["packages"].get(pkg, {})
         if m.get("transitional"):  # empty upgrade packages stay in Packages but aren't listed
@@ -242,7 +247,7 @@ def main():
         if not m:
             print(f"gen_repo: warning: no meta/packages.json entry for {pkg}; no depiction generated", file=sys.stderr)
             continue
-        write_if_changed(f"depictions/{pkg}.json", json.dumps(sileo_depiction(pkg, ctl, m, base, size), indent=2) + "\n")
+        write_if_changed(f"depictions/{pkg}.json", json.dumps(sileo_depiction(pkg, ctl, m, base, size, site_names(meta_all)), indent=2) + "\n")
     write_site(latest, meta_all, base, args.fingerprint)
     with open("README.md") as f:
         readme = f.read()

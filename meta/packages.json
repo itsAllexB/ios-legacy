@@ -35,8 +35,8 @@
       ],
       "settings": "Settings > Split View:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Mode**: *Split View + Slide Over* (default, like iPads with official Split View), *Split View, 2 apps max* (uses less memory), or *Slide Over only (stock)*.\n- **Respring**: restarts SpringBoard. Only needed if a Split View is open while you change the mode.",
       "screenshots": [
-        {"file": "split-view-portrait.png", "web": false, "alt": "Mail and Notes side by side in portrait"},
-        {"file": "split-view-safari-weather.png", "web": false, "alt": "Safari and Weather side by side in portrait"},
+        {"file": "split-view-portrait.png", "alt": "Mail and Notes side by side in portrait"},
+        {"file": "split-view-safari-weather.png", "alt": "Safari and Weather side by side in portrait"},
         {"file": "settings.png", "alt": "Split View settings page"}
       ],
       "changelog": [
@@ -67,10 +67,10 @@
       ],
       "settings": "Settings > Weather for iPad:\n\n- **Enabled**: turns all fixes on or off. Layout changes apply the next time Weather opens.\n- **Widget Opens Weather App**: tapping the Weather widget opens the Weather app for that city instead of weather.com. Applies right away.\n- **Use iPhone Layout**: runs Weather like any iPhone app (2x button, no multitasking) instead of the iPad layout. Needs a respring, then reopen Weather.\n- **Animated Backgrounds**: shows the animated backgrounds scaled to fill the screen. Needs the backgrounds from the installer; without them, or when off, Weather shows a plain gradient.\n- **Respring**: restarts SpringBoard.",
       "screenshots": [
-        {"file": "weather-portrait.jpg", "web": false, "alt": "Weather in portrait"},
-        {"file": "weather-landscape.jpg", "web": false, "alt": "Weather in landscape, two columns"},
-        {"file": "weather-thunderstorm.jpg", "web": false, "alt": "Animated thunderstorm background"},
-        {"file": "weather-slide-over.jpg", "web": false, "alt": "Weather in Slide Over"},
+        {"file": "weather-portrait.jpg", "alt": "Weather in portrait"},
+        {"file": "weather-landscape.jpg", "alt": "Weather in landscape, two columns"},
+        {"file": "weather-thunderstorm.jpg", "alt": "Animated thunderstorm background"},
+        {"file": "weather-slide-over.jpg", "alt": "Weather in Slide Over"},
         {"file": "settings.png", "alt": "Weather for iPad settings page"}
       ],
       "changelog": [
@@ -204,14 +204,14 @@
       ],
       "settings": "Settings > Battery:\n\n- **Battery Percentage**: Off, Next to Icon or Inside Icon.\n- **Low Power Mode**: Automatic (**Turn On Automatically**, off; **Turn On At** 5% to 20%) and Manual (the **Low Power Mode** switch).\n- **Battery Health**: Maximum Capacity, Cycle Count and Manufacture Date.\n- **Charging**: **Unplug Reminder** (off) and **Remind At** (80% to 100%).\n\nControl Center: Settings > Control Center > Customize Controls > Low Power Mode (needs CCSupport).",
       "screenshots": [
-        {"file": "battery.png", "crop_left": 0.417, "alt": "Settings > Battery with Battery Percentage, Low Power Mode, Battery Health and Charging"},
-        {"file": "low-power-mode.png", "crop_left": 0.417, "alt": "Low Power Mode page with Automatic and Manual"},
-        {"file": "battery-percentage.png", "crop_left": 0.417, "alt": "Battery Percentage: Off, Next to Icon, Inside Icon"},
+        {"file": "battery.png", "alt": "Settings > Battery with Battery Percentage, Low Power Mode, Battery Health and Charging"},
+        {"file": "low-power-mode.png", "alt": "Low Power Mode page with Automatic and Manual"},
+        {"file": "battery-percentage.png", "alt": "Battery Percentage: Off, Next to Icon, Inside Icon"},
         {"file": "control-center-match.png", "alt": "The percentage inside the battery icon, in the status bar and in Control Center"},
-        {"file": "battery-health.png", "crop_left": 0.417, "alt": "Battery Health page"},
-        {"file": "charging.png", "crop_left": 0.417, "alt": "Charging page with the Unplug Reminder"},
-        {"file": "unplug-reminder.png", "web": false, "alt": "Unplug Reminder alert"},
-        {"file": "control-center.png", "web": false, "alt": "Low Power Mode module in Control Center"}
+        {"file": "battery-health.png", "alt": "Battery Health page"},
+        {"file": "charging.png", "alt": "Charging page with the Unplug Reminder"},
+        {"file": "unplug-reminder.png", "alt": "Unplug Reminder alert"},
+        {"file": "control-center.png", "alt": "Low Power Mode module in Control Center"}
       ],
       "changelog": [
         {"version": "1.2.0", "changes": ["Automatic Low Power Mode: turns on when the battery drops to 5, 10, 15 or 20%, and off again at 80%.", "Low Power Mode you turn on yourself stays on until you turn it off.", "Settings > Battery has a Battery Percentage page (Off, Next to Icon, Inside Icon) and a Low Power Mode page (Automatic, Manual). The Status Bar page is gone.", "Battery Percentage can be changed in Low Power Mode, which no longer forces it on.", "Percentage inside the icon: easier to read in Low Power Mode and while charging, and in Control Center it now looks exactly like the status bar, charging bolt included.", "Battery Colours removed: the battery uses iOS 12's own colours.", "Charging no longer shows the unavailable Charge Limit."]},
@@ -242,7 +242,7 @@
       "settings": "Settings > Default Apps:\n\n- **Enabled**: turns the tweak on or off. Applies right away.\n- **Browser**, **Mail**, **Maps**: the app for each kind of link. Each list shows the Apple app and the supported apps that are installed, with their icons; the note under each list names the other supported apps.",
       "screenshots": [
         {"file": "settings.png", "alt": "Default Apps settings page"},
-        {"file": "maps-picker.png", "web": false, "alt": "Maps picker with Maps and Google Maps, each with its icon"},
+        {"file": "maps-picker.png", "alt": "Maps picker with Maps and Google Maps, each with its icon"},
         {"file": "google-maps-place.jpg", "alt": "An Apple Maps link opened in Google Maps"},
         {"file": "google-maps-route.png", "alt": "An Apple Maps route opened in Google Maps"},
         {"file": "mailto-fields.png", "alt": "The fields a mail app receives from a mailto link"}
@@ -280,12 +280,12 @@
         {"file": "google-100.png", "alt": "Google search (English, Google Japan) at 100% (iOS default)"},
         {"file": "google-080.png", "alt": "Google search (English, Google Japan) at 80% (default)"},
         {"file": "google-050.png", "alt": "Google search (English, Google Japan) at 50%"},
-        {"file": "youtube-100.png", "web": false, "alt": "YouTube search results at 100% (iOS default)"},
-        {"file": "youtube-080.png", "web": false, "alt": "YouTube search results at 80% (default)"},
-        {"file": "youtube-050.png", "web": false, "alt": "YouTube search results at 50%"},
-        {"file": "wikipedia-100.png", "web": false, "alt": "Wikipedia article at 100% (iOS default)"},
-        {"file": "wikipedia-080.png", "web": false, "alt": "Wikipedia article at 80% (default)"},
-        {"file": "wikipedia-050.png", "web": false, "alt": "Wikipedia article at 50%"},
+        {"file": "youtube-100.png", "alt": "YouTube search results at 100% (iOS default)"},
+        {"file": "youtube-080.png", "alt": "YouTube search results at 80% (default)"},
+        {"file": "youtube-050.png", "alt": "YouTube search results at 50%"},
+        {"file": "wikipedia-100.png", "alt": "Wikipedia article at 100% (iOS default)"},
+        {"file": "wikipedia-080.png", "alt": "Wikipedia article at 80% (default)"},
+        {"file": "wikipedia-050.png", "alt": "Wikipedia article at 50%"},
         {"file": "hn-100.png", "alt": "Hacker News at 100% (iOS default)"},
         {"file": "hn-080.png", "alt": "Hacker News at 80% (default)"},
         {"file": "hn-050.png", "alt": "Hacker News at 50%"},
@@ -326,7 +326,7 @@
         {"file": "receive.png", "alt": "Receive page, ready for nearby LocalSend devices"},
         {"file": "send.png", "alt": "Send page with a nearby LocalSend device"},
         {"file": "transfer.png", "alt": "Live transfer screen while receiving three files"},
-        {"file": "share-sheet.png", "web": false, "alt": "OldSend in Safari's share sheet"},
+        {"file": "share-sheet.png", "alt": "OldSend in Safari's share sheet"},
         {"file": "settings.png", "alt": "Settings: Quick Save, Save to Photos and Run in Background"},
         {"file": "about.png", "alt": "Credits to lihaoyun6 and the LocalSend team"}
       ],

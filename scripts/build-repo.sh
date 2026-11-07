@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 itsAllexB
+# Copyright (C) 2026 AllexB
 #
 # Rebuild the APT index (Packages, Packages.gz/.bz2/.xz, Release), the depictions and
 # index.html from debs/ + meta/packages.json, then sign Release (Release.gpg, InRelease).

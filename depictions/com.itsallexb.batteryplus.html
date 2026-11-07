@@ -2,33 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BatteryPlus (iOS 12)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7d93b0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2c384a" media="(prefers-color-scheme: dark)">
+<title>BatteryPlus</title>
 <link rel="stylesheet" href="../depictions/style.css">
+<link rel="apple-touch-icon-precomposed" href="../CydiaIcon.png">
+<link rel="icon" href="../CydiaIcon.png">
+<script>(function(d,u){var m=/\bOS (\d+)_\d/.exec(u),s=' js';if(/Cydia|Zebra|Sileo|Installer/.test(u))s+=' inapp';if(m){if(+m[1]<9)s+=' cydiaonly';}else if(!(navigator.maxTouchPoints>1))s+=' notios';d.documentElement.className+=s;window.iosMajor=m?m[1]:'';if(window.top!==window.self)d.write('<base target="_top">');})(document,navigator.userAgent);</script>
 </head>
-<body>
-<main>
-<div class="card head"><img src="../icons/com.itsallexb.batteryplus.png" alt="">
-<div><h1>BatteryPlus (iOS 12)</h1><div class="muted">Low Power Mode, Automatic Low Power Mode, Battery Health and the percentage inside the battery icon for iOS 12 iPads.</div></div></div>
-<div class="card"><p>On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.</p>
+<body ontouchstart="">
+<div class="nav"><div class="nav-in"><a class="back" href="../">iOS Legacy</a><h1>BatteryPlus</h1></div></div>
+<main class="wrap">
+<div class="side">
+<div class="hero"><span class="ic big gloss"><img src="../icons/com.itsallexb.batteryplus.png" alt="" width="72" height="72"></span><h2>BatteryPlus</h2><p>Low Power Mode and Battery Health for iPad.</p></div>
+<div class="addblock pkgadd">
+<a class="glass blue" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://itsallexb.github.io/ios-legacy/">Add to Cydia</a>
+<div class="pair"><a class="glass silver" href="sileo://source/https://itsallexb.github.io/ios-legacy/">Add to Sileo</a><a class="glass silver" href="zbra://sources/add/https://itsallexb.github.io/ios-legacy/">Add to Zebra</a></div>
+<p class="foot deskhint">Open this page on your iPhone or iPad.</p>
+</div>
+</div>
+<div class="main">
+<ul class="group"><li><div class="text"><p>On iOS 12, Apple keeps most battery features for iPhone. BatteryPlus brings them to iPad, in the iOS 12 style.</p>
 <p><strong>Low Power Mode</strong> gets its own page in Settings &gt; Battery and, with CCSupport, a module in Control Center. It is the real iOS mode: mail fetch, iCloud Photos, dynamic wallpapers and other background work pause. <strong>Automatic Low Power Mode</strong> turns it on when the battery drops to 5, 10, 15 or 20% and off again at 80%; Low Power Mode you turn on yourself stays on until you turn it off.</p>
-<p><strong>Battery Percentage</strong> can be off, next to the battery icon, or <strong>inside it, like modern iOS</strong>, also in Control Center, where it matches the status bar exactly. <strong>Battery Health</strong> shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself, and an optional <strong>Unplug Reminder</strong> tells you when the iPad has charged to the level you choose.</p></div>
-<div class="card"><h2>Screenshots</h2><div class="shots"><img src="screenshots/batteryplus/battery.png" alt="Settings &gt; Battery with Battery Percentage, Low Power Mode, Battery Health and Charging" loading="lazy"><img src="screenshots/batteryplus/low-power-mode.png" alt="Low Power Mode page with Automatic and Manual" loading="lazy"><img src="screenshots/batteryplus/battery-percentage.png" alt="Battery Percentage: Off, Next to Icon, Inside Icon" loading="lazy"><img src="screenshots/batteryplus/control-center-match.png" alt="The percentage inside the battery icon, in the status bar and in Control Center" loading="lazy"><img src="screenshots/batteryplus/battery-health.png" alt="Battery Health page" loading="lazy"><img src="screenshots/batteryplus/charging.png" alt="Charging page with the Unplug Reminder" loading="lazy"><img src="screenshots/batteryplus/unplug-reminder.png" alt="Unplug Reminder alert" loading="lazy"><img src="screenshots/batteryplus/control-center.png" alt="Low Power Mode module in Control Center" loading="lazy"></div></div>
-<div class="card"><h2>Features</h2><ul><li>Low Power Mode in Settings &gt; Battery, as on iPhone, and in Control Center (needs CCSupport)</li><li>Automatic Low Power Mode: on at 5, 10, 15 or 20%, off again at 80%</li><li>Low Power Mode you turn on yourself stays on until you turn it off</li><li>Battery Percentage: off, next to the icon or inside it, like modern iOS (also in Control Center)</li><li>Battery Health: Maximum Capacity, Cycle Count and Manufacture Date</li><li>Unplug Reminder at 80, 85, 90, 95 or 100%</li><li>No timers: nothing runs while idle</li></ul></div>
-<div class="card"><h2>Settings</h2><p>Settings &gt; Battery:</p>
+<p><strong>Battery Percentage</strong> can be off, next to the battery icon, or <strong>inside it, like modern iOS</strong>, also in Control Center, where it matches the status bar exactly. <strong>Battery Health</strong> shows Maximum Capacity, Cycle Count and Manufacture Date from the battery itself, and an optional <strong>Unplug Reminder</strong> tells you when the iPad has charged to the level you choose.</p></div></li></ul>
+<div class="shots"><a href="screenshots/batteryplus/battery.png" style="width:195px;height:260px"><img src="screenshots/batteryplus/battery.png" alt="Settings &gt; Battery with Battery Percentage, Low Power Mode, Battery Health and Charging" width="195" height="260" loading="lazy"></a><a href="screenshots/batteryplus/low-power-mode.png" style="width:195px;height:260px"><img src="screenshots/batteryplus/low-power-mode.png" alt="Low Power Mode page with Automatic and Manual" width="195" height="260" loading="lazy"></a><a href="screenshots/batteryplus/battery-percentage.png" style="width:195px;height:260px"><img src="screenshots/batteryplus/battery-percentage.png" alt="Battery Percentage: Off, Next to Icon, Inside Icon" width="195" height="260" loading="lazy"></a><a href="screenshots/batteryplus/control-center-match.png" style="width:296px;height:181px"><img src="screenshots/batteryplus/control-center-match.png" alt="The percentage inside the battery icon, in the status bar and in Control Center" width="296" height="181" loading="lazy"></a><a href="screenshots/batteryplus/battery-health.png" style="width:195px;height:260px"><img src="screenshots/batteryplus/battery-health.png" alt="Battery Health page" width="195" height="260" loading="lazy"></a><a href="screenshots/batteryplus/charging.png" style="width:195px;height:260px"><img src="screenshots/batteryplus/charging.png" alt="Charging page with the Unplug Reminder" width="195" height="260" loading="lazy"></a><a href="screenshots/batteryplus/unplug-reminder.png" style="width:195px;height:260px"><img src="screenshots/batteryplus/unplug-reminder.png" alt="Unplug Reminder alert" width="195" height="260" loading="lazy"></a><a href="screenshots/batteryplus/control-center.png" style="width:296px;height:87px"><img src="screenshots/batteryplus/control-center.png" alt="Low Power Mode module in Control Center" width="296" height="87" loading="lazy"></a></div>
+<h2 class="sec">Features</h2>
+<ul class="group"><li><div class="line">Low Power Mode in Settings &gt; Battery, as on iPhone, and in Control Center (needs CCSupport)</div></li><li><div class="line">Automatic Low Power Mode: on at 5, 10, 15 or 20%, off again at 80%</div></li><li><div class="line">Low Power Mode you turn on yourself stays on until you turn it off</div></li><li><div class="line">Battery Percentage: off, next to the icon or inside it, like modern iOS (also in Control Center)</div></li><li><div class="line">Battery Health: Maximum Capacity, Cycle Count and Manufacture Date</div></li><li><div class="line">Unplug Reminder at 80, 85, 90, 95 or 100%</div></li><li><div class="line">No timers: nothing runs while idle</div></li></ul>
+<h2 class="sec">Compatibility</h2>
+<ul class="group"><li><div class="line">Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)</div></li><li><div class="line">Expected to work on other iOS 12 iPads; battery data depends on what each battery reports</div></li><li><div class="line">Control Center module: install CCSupport (recommended)</div></li><li><div class="line">No charge limit on A7 iPads, and Low Power Mode doesn't slow the CPU there</div></li></ul>
+<ul class="group"><li><details><summary>Settings</summary><div class="text"><p>Settings &gt; Battery:</p>
 <ul><li><strong>Battery Percentage</strong>: Off, Next to Icon or Inside Icon.</li><li><strong>Low Power Mode</strong>: Automatic (<strong>Turn On Automatically</strong>, off; <strong>Turn On At</strong> 5% to 20%) and Manual (the <strong>Low Power Mode</strong> switch).</li><li><strong>Battery Health</strong>: Maximum Capacity, Cycle Count and Manufacture Date.</li><li><strong>Charging</strong>: <strong>Unplug Reminder</strong> (off) and <strong>Remind At</strong> (80% to 100%).</li></ul>
-<p>Control Center: Settings &gt; Control Center &gt; Customize Controls &gt; Low Power Mode (needs CCSupport).</p></div>
-<div class="card"><h2>Compatibility</h2><ul><li>Tested on iPad mini 2, iOS 12.5.8 (checkra1n + odysseyra1n / libhooker)</li><li>Expected to work on other iOS 12 iPads; battery data depends on what each battery reports</li><li>Control Center module: install CCSupport (recommended)</li><li>No charge limit on A7 iPads, and Low Power Mode doesn't slow the CPU there</li></ul></div>
-<div class="card"><h2>Changelog</h2><p><strong>Version 1.2.0</strong></p><ul><li>Automatic Low Power Mode: turns on when the battery drops to 5, 10, 15 or 20%, and off again at 80%.</li><li>Low Power Mode you turn on yourself stays on until you turn it off.</li><li>Settings &gt; Battery has a Battery Percentage page (Off, Next to Icon, Inside Icon) and a Low Power Mode page (Automatic, Manual). The Status Bar page is gone.</li><li>Battery Percentage can be changed in Low Power Mode, which no longer forces it on.</li><li>Percentage inside the icon: easier to read in Low Power Mode and while charging, and in Control Center it now looks exactly like the status bar, charging bolt included.</li><li>Battery Colours removed: the battery uses iOS 12's own colours.</li><li>Charging no longer shows the unavailable Charge Limit.</li></ul><p><strong>Version 1.1.0</strong></p><ul><li>First public release.</li><li>Low Power Mode in Settings and Control Center, status bar battery colours and the percentage inside the icon, alongside Battery Health and the Unplug Reminder.</li></ul></div>
-<div class="card"><h2>Information</h2><table>
-<tr><td>Version</td><td>1.2.0</td></tr>
-<tr><td>Developer</td><td>itsAllexB</td></tr>
-<tr><td>Size</td><td>31 KB</td></tr>
-<tr><td>License</td><td>GPL-3.0</td></tr>
-<tr><td>Source code</td><td><a href="https://github.com/itsAllexB/BatteryPlus-iOS12">GitHub</a></td></tr>
-<tr><td>Problems</td><td><a href="https://github.com/itsAllexB/BatteryPlus-iOS12/issues">Report an issue</a></td></tr>
-</table></div>
-<p class="muted small">Unofficial. Not affiliated with or endorsed by Apple.</p>
+<p>Control Center: Settings &gt; Control Center &gt; Customize Controls &gt; Low Power Mode (needs CCSupport).</p></div></details></li></ul>
+<h2 class="sec">What's New</h2><ul class="group"><li><div class="text"><p class="ver-t">Version 1.2.0</p><ul><li>Automatic Low Power Mode: turns on when the battery drops to 5, 10, 15 or 20%, and off again at 80%.</li><li>Low Power Mode you turn on yourself stays on until you turn it off.</li><li>Settings &gt; Battery has a Battery Percentage page (Off, Next to Icon, Inside Icon) and a Low Power Mode page (Automatic, Manual). The Status Bar page is gone.</li><li>Battery Percentage can be changed in Low Power Mode, which no longer forces it on.</li><li>Percentage inside the icon: easier to read in Low Power Mode and while charging, and in Control Center it now looks exactly like the status bar, charging bolt included.</li><li>Battery Colours removed: the battery uses iOS 12's own colours.</li><li>Charging no longer shows the unavailable Charge Limit.</li></ul></div></li></ul>
+<ul class="group"><li><details><summary>Version History</summary><div class="text"><p class="ver-t">Version 1.1.0</p><ul><li>First public release.</li><li>Low Power Mode in Settings and Control Center, status bar battery colours and the percentage inside the icon, alongside Battery Health and the Unplug Reminder.</li></ul></div></details></li></ul>
+</div>
+<div class="side">
+<h2 class="sec">Information</h2>
+<ul class="group"><li><div class="row"><span class="val">1.2.0</span>Version</div></li><li><div class="row"><span class="val">AllexB</span>Developer</div></li><li><div class="row"><span class="val">31 KB</span>Size</div></li><li><div class="row"><span class="val">iOS 12</span>Requires</div></li><li><div class="row"><span class="val">iPad</span>Devices</div></li><li><div class="row"><span class="val">GPL-3.0</span>License</div></li></ul>
+<ul class="group"><li><a class="row" href="https://github.com/itsAllexB/BatteryPlus-iOS12">Source Code</a></li><li><a class="row" href="https://github.com/itsAllexB/BatteryPlus-iOS12/issues">Report a Problem</a></li></ul>
+</div>
+<p class="legal">Unofficial. Not affiliated with or endorsed by Apple.</p>
 </main>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7d93b0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2c384a" media="(prefers-color-scheme: dark)">
+<title>OldSend</title>
+<link rel="stylesheet" href="../depictions/style.css">
+<link rel="apple-touch-icon-precomposed" href="../CydiaIcon.png">
+<link rel="icon" href="../CydiaIcon.png">
+<script>(function(d,u){var m=/\bOS (\d+)_\d/.exec(u),s=' js';if(/Cydia|Zebra|Sileo|Installer/.test(u))s+=' inapp';if(m){if(+m[1]<9)s+=' cydiaonly';}else if(!(navigator.maxTouchPoints>1))s+=' notios';d.documentElement.className+=s;window.iosMajor=m?m[1]:'';if(window.top!==window.self)d.write('<base target="_top">');})(document,navigator.userAgent);</script>
+</head>
+<body ontouchstart="">
+<div class="nav"><div class="nav-in"><a class="back" href="../">iOS Legacy</a><h1>OldSend</h1></div></div>
+<main class="wrap">
+<div class="side">
+<div class="hero"><span class="ic big"><img src="../icons/com.itsallexb.oldsend.png" alt="" width="72" height="72"></span><h2>OldSend</h2><p>Send files to any device running LocalSend.</p></div>
+<div class="addblock pkgadd">
+<a class="glass blue" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://itsallexb.github.io/ios-legacy/">Add to Cydia</a>
+<div class="pair"><a class="glass silver" href="sileo://source/https://itsallexb.github.io/ios-legacy/">Add to Sileo</a><a class="glass silver" href="zbra://sources/add/https://itsallexb.github.io/ios-legacy/">Add to Zebra</a></div>
+<p class="foot deskhint">Open this page on your iPhone or iPad.</p>
+</div>
+</div>
+<div class="main">
+<ul class="group"><li><div class="text"><p>OldSend 2.0 is my version of <strong>OldSend by lihaoyun6</strong>, the native LocalSend client for old iPhones, made for iOS 6 on Retina iPhones. It talks to the LocalSend app on today's phones and computers (Windows, macOS, Linux, Android, iOS) over your Wi-Fi: no cables, no cloud.</p>
+<p>Share from any app with the OldSend button in the share sheet, watch every file on a live transfer screen, and turn on <strong>Run in Background</strong> to stay discoverable with the app closed.</p></div></li></ul>
+<div class="shots"><a href="screenshots/oldsend/receive.png" style="width:173px;height:260px"><img src="screenshots/oldsend/receive.png" alt="Receive page, ready for nearby LocalSend devices" width="173" height="260" loading="lazy"></a><a href="screenshots/oldsend/send.png" style="width:173px;height:260px"><img src="screenshots/oldsend/send.png" alt="Send page with a nearby LocalSend device" width="173" height="260" loading="lazy"></a><a href="screenshots/oldsend/transfer.png" style="width:173px;height:260px"><img src="screenshots/oldsend/transfer.png" alt="Live transfer screen while receiving three files" width="173" height="260" loading="lazy"></a><a href="screenshots/oldsend/share-sheet.png" style="width:173px;height:260px"><img src="screenshots/oldsend/share-sheet.png" alt="OldSend in Safari&#x27;s share sheet" width="173" height="260" loading="lazy"></a><a href="screenshots/oldsend/settings.png" style="width:173px;height:260px"><img src="screenshots/oldsend/settings.png" alt="Settings: Quick Save, Save to Photos and Run in Background" width="173" height="260" loading="lazy"></a><a href="screenshots/oldsend/about.png" style="width:173px;height:260px"><img src="screenshots/oldsend/about.png" alt="Credits to lihaoyun6 and the LocalSend team" width="173" height="260" loading="lazy"></a></div>
+<h2 class="sec">Features</h2>
+<ul class="group"><li><div class="line">Works with LocalSend everywhere (protocol v2.2 over TLS 1.2), including sending to LocalSend on desktop</div></li><li><div class="line">Live transfer screen: per-file progress and state, overall progress, files, size, speed and time left, with Cancel</div></li><li><div class="line">OldSend in the share sheet of every app (Safari, Photos and more), and in "Open in…" for any file</div></li><li><div class="line">Run in Background (off by default): discoverable and able to receive with the app closed; a notification opens the Accept / Decline prompt</div></li><li><div class="line">Send photos, videos, text, the clipboard, links and any file, with a built-in file browser</div></li><li><div class="line">Save to Photos: received photos and videos go straight to Photos, or stay in History</div></li><li><div class="line">Network info on the Receive page, Quick Save, English and Simplified Chinese</div></li><li><div class="line">Sharp on Retina screens, with a new app icon</div></li></ul>
+<h2 class="sec">Compatibility</h2>
+<ul class="group"><li><div class="line">Tested on iPhone 4S, iOS 6.1.3 (Cydia Substrate), with LocalSend 1.17 on Windows</div></li><li><div class="line">iOS 6.x only (armv7)</div></li><li><div class="line">Replaces lihaoyun6's OldSend (com.lihaoyun6.oldsend) if it is installed; settings and the device's LocalSend identity carry over</div></li></ul>
+<ul class="group"><li><details><summary>Settings</summary><div class="text"><p>In OldSend's own Settings tab:</p>
+<ul><li><strong>Nickname</strong>: the name other LocalSend devices see.</li><li><strong>Quick Save</strong>: accept incoming files without asking.</li><li><strong>Save to Photos</strong>: move received photos and videos into Photos (default on).</li><li><strong>Run in Background</strong>: stay discoverable and able to receive with OldSend closed (default off). When the phone sleeps, iOS pauses it, so it doesn't use battery.</li></ul></div></details></li></ul>
+<h2 class="sec">What's New</h2><ul class="group"><li><div class="text"><p class="ver-t">Version 2.0</p><ul><li>First release of OldSend 2.0, based on OldSend 1.0.1 by lihaoyun6.</li><li>Sends to LocalSend on desktop again; live transfer screen; share sheet and "Open in…"; Run in Background; Save to Photos; network info; Retina artwork and a new icon; many robustness fixes.</li></ul></div></li></ul>
+
+</div>
+<div class="side">
+<h2 class="sec">Information</h2>
+<ul class="group"><li><div class="row"><span class="val">2.0</span>Version</div></li><li><div class="row"><span class="val">lihaoyun6</span>Developer</div></li><li><div class="row"><span class="val">AllexB</span>Maintainer</div></li><li><div class="row"><span class="val">904 KB</span>Size</div></li><li><div class="row"><span class="val">iOS 6</span>Requires</div></li><li><div class="row"><span class="val">Retina iPhones</span>Devices</div></li><li><div class="row"><span class="val">GPL-3.0</span>License</div></li></ul>
+<ul class="group"><li><a class="row" href="https://github.com/itsAllexB/OldSend">Source Code</a></li><li><a class="row" href="https://github.com/itsAllexB/OldSend/issues">Report a Problem</a></li></ul>
+</div>
+<p class="legal">Unofficial. Not affiliated with or endorsed by Apple.</p>
+</main>
+</body>
+</html>
